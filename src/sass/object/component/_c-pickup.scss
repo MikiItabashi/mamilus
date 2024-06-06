@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.c-pickup {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: rem(50);
+  aspect-ratio: 100 / 90;
+  font-size: rem(12);
+  line-height: calc(26 / 24);
+  font-family: $en-font-family;
+  background-color: $dark-blue;
+  color: $white;
+  border-radius: rem(22.5) rem(22.5) 0 rem(22.5);
+  @include mq("md") {
+    width: rem(80);
+    font-size: rem(18);
+    border-radius: rem(37) rem(37) 0 rem(37);
+  }
+}

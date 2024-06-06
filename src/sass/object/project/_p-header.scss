@@ -1,0 +1,192 @@
+@use "global" as *;
+
+.p-header {
+  width: 100%;
+  height: rem(68);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background-color .3s;
+    @include mq("md") {
+      height: rem(128);
+    }
+}
+
+//背景色変更用クラス
+.p-header.is-color-changed {
+  background-color: $white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.p-header__inner.l-inner {
+  display: flex;
+  height: inherit;
+  padding-inline: rem(15);
+  @include mq("md") {
+    max-width: 1650px;
+    padding-inline: rem(25);
+    gap: rem(40);
+ }
+}
+
+.p-header__left {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  @include mq("md") {
+    gap: rem(18);
+ }
+}
+
+.p-header__logo {
+  flex-shrink: 0;
+  width: rem(140);
+  height: rem(40);
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+  border-radius: rem(40);
+  @include mq("md") {
+    width: rem(240);
+    height: rem(70);
+    border-radius: rem(35);
+  }
+}
+
+.p-header__logo a {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.p-header__logo a img {
+  display: inline-block;
+  width: 76%;
+}
+
+.p-header__desc {
+  font-size: rem(7);
+  line-height: calc(22 / 15);
+  font-weight: $bold;
+  @include mq("md") {
+    font-size: rem(11);
+    white-space: nowrap;
+  }
+}
+
+.p-header__right {
+  display: none; 
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    gap: rem(26);
+    margin-left: auto;
+  }
+}
+
+.p-header__nav {
+
+}
+
+.p-header__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3em 1em;
+}
+
+.p-header__nav-item {
+
+}
+
+.p-header__nav-item a {
+  font-size: rem(15);
+  font-weight: $bold;
+  display: inline-flex;
+  align-items: center;
+}
+
+.p-header__nav-item a::before {
+  content: "";
+  display: inline-block;
+  width: rem(5);
+  height: rem(5);
+  background-color: $pink;
+  border-radius: 50%;
+  margin-right: rem(11);
+}
+
+@media (any-hover: hover) {
+  .p-header__nav-item a:hover {
+    color: $pink;
+  }
+}
+
+.p-header__btn {
+  width: rem(180);
+  flex-shrink: 0;
+}
+
+
+//ハンバーガー
+.p-header__hamburger {
+  display: grid;
+  place-content: center;
+  width: rem(40);
+  height: rem(40);
+  gap: rem(4);
+  position: fixed;
+  top: rem(15);
+  right: rem(15);
+  background-color: $pink;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 110;
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.p-header__hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-inline: auto;
+  width: rem(17);
+  height: rem(12);
+  position: relative;
+}
+
+// 閉じてる時
+.p-header__hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  transition: .3s;
+  background-color: $white;
+}
+
+// 開いてる時
+.p-header__hamburger[aria-expanded=true] {
+  .p-header__hamburger-icon span:nth-child(1) {
+    transform: translateY(#{rem(5)}) rotate(45deg);
+  }
+  .p-header__hamburger-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .p-header__hamburger-icon span:nth-child(3) {
+    transform: translateY(#{rem(-5)}) rotate(-45deg);
+  }
+}
+
+.p-header__hamburger-text {
+  font-size: rem(7);
+  line-height: 1;
+  color: $white;
+  font-weight: $bold;
+}
+
+
+
+

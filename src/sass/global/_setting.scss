@@ -1,0 +1,40 @@
+@use "sass:math";
+
+// インナー幅設定
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1280px;
+// ※キュンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 30px;
+$padding-sp: 30px;
+
+////////////////////
+// フォント設定
+////////////////////
+$base-font-family: "Noto Sans JP", sans-serif;
+$second-font-family: 'Yu Mincho', '游明朝体', 'YuMincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'MS PMincho', 'MS P明朝', serif;
+$en-font-family: "Marcellus", serif;
+
+// フォントウェイト
+$regular: 400;
+$semi-bold: 600;
+$medium: 500;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$black: #111;
+$white: #fff;
+$dark-blue: #292f4a;
+$pink: #e77379;
+$gray: #f5f5f2;
+
+
+
+
+
+

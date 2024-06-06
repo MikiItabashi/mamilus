@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.c-new {
+  display: grid;
+  place-items: center;
+  width: rem(40);
+  aspect-ratio: 40 / 35;
+  font-size: rem(11);
+  font-family: $en-font-family;
+  background-color: $pink;
+  color: $white;
+  border-radius: rem(17.5) rem(17.5) 0 rem(17.5);
+  @include mq("md") {
+    width: rem(60);
+    font-size: rem(18);
+    border-radius: rem(24) rem(31) 0 rem(26);
+  }
+}

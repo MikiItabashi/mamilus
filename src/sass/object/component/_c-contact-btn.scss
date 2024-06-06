@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.c-contact-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(6);
+  padding: rem(17) rem(10);
+  font-size: rem(14);
+  line-height: calc(18 / 15);
+  font-weight: $bold;
+  border-radius: rem(50);
+  background-color: $pink;
+  color: $white;
+  @include mq("md") {
+    gap: rem(13);
+    padding: rem(16) rem(10);
+    font-size: rem(15);
+    border-radius: rem(25);
+  }
+}
+
+.c-contact-btn::before {
+  content: "";
+  display: inline-block;
+  width: rem(14);
+  aspect-ratio: 27 / 19;
+  flex-shrink: 0;
+  background-image: url(../images/common/contact-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: transform 0.3s;
+  @include mq("md") {
+    width: rem(16);
+  }
+}

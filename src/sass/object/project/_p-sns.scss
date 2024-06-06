@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.p-sns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(5);
+  @include mq("md") {
+    gap: rem(10);
+  }
+}
+
+.p-sns__item {
+
+}
+
+.p-sns__item a {
+  display: inline-block;
+  width: rem(19);
+  height: rem(19);
+  @include mq("md") {
+    width: rem(30);
+    height: rem(30);
+  }
+}

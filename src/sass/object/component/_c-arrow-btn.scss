@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.c-arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(17);
+  padding: rem(15) rem(23) rem(15) rem(9);
+  // padding: rem(15) rem(9) rem(15) rem(9);
+  font-size: rem(14);
+  line-height: calc(32 / 28);
+  font-weight: $bold;
+  border-radius: rem(50);
+  background-color: $pink;
+  color: $white;
+
+  @include mq("md") {
+    gap: rem(30);
+    width: 100%;
+    // padding: rem(13) rem(26) rem(13) rem(13);
+    padding: rem(13) rem(13) rem(13) rem(13);
+    font-size: rem(16);
+    border-radius: rem(33);
+  }
+}
+.c-arrow-btn::before {
+  content: "";
+  display: inline-block;
+  width: rem(20);
+  height: rem(20);
+  background-color: $white;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-image: url(../images/common/arrow-right-pink.svg);
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: center;
+  transition: transform 0.3s;
+  z-index: 1;
+  @include mq("md") {
+    width: rem(40);
+    height: rem(40);
+  }
+}
+
+@media (any-hover: hover) {
+  .c-arrow-btn:hover::before {
+    transform: translateX(rem(8));
+  }
+}
+
+//白
+.c-arrow-btn.--white {
+  background-color: $white;
+  color: currentColor;
+  border: solid 1px #d4d5db;
+}
+
+.c-arrow-btn.--white::before {
+  background-color: $pink;
+  background-image: url(../images/common/arrow-right-white.svg);
+}

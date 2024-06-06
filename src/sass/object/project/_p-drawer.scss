@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.p-drawer {
+  width: rem(315);
+  max-height: rem(500);
+  overflow-y: auto;
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  border-radius: 0 0 0 rem(40);
+  padding: rem(70) rem(30) rem(42);
+  transition: .3s;
+
+  @include mq("md") {
+    display: none;   
+  }
+}
+
+//閉じてる時
+.p-drawer[aria-hidden=true] {
+  visibility: hidden;
+  right: rem(-315);
+}
+
+// 開いてる時
+.p-drawer[aria-hidden=false] {
+  visibility: visible;
+  right: 0;
+}
+
+.p-drawer__nav {
+
+}
+
+.p-drawer__nav-list {
+
+}
+
+.p-drawer__nav-item {
+
+}
+
+.p-drawer__nav-item a {
+  font-size: rem(14);
+  font-weight: $bold;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: rem(10) 0;
+}
+
+.p-drawer__nav-item a::before {
+  content: "";
+  display: inline-block;
+  width: rem(5);
+  height: rem(5);
+  background-color: $pink;
+  border-radius: 50%;
+  margin-right: rem(8);
+}
+
+.p-drawer__btn {
+  margin-top: rem(22);
+}
+

@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.c-category {
+  display: inline-block;
+  font-size: rem(11);
+  padding: rem(4) rem(8);
+  line-height: 1;
+  border: solid 1px #9497a4;
+  border-radius: rem(5);
+  @include mq("md") {
+    font-size: rem(13);
+    padding: rem(8) rem(12);
+  }
+}

@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.c-heading {
+
+}
+
+.c-heading__en {
+  font-size: rem(39);
+  font-family: $en-font-family;
+  color: $pink;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  @include mq("md") {
+    font-size: rem(64);
+  }
+}
+
+.c-heading__ja {
+  margin-top: rem(9);
+  font-size: rem(14);
+  font-family: $second-font-family;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  font-weight: $semi-bold;
+  @include mq("md") {
+    margin-top: rem(17);
+    font-size: rem(24);
+  }
+}
+
+//白
+.c-heading.--white {
+  .c-heading__en {
+    color: $white;
+  }
+  .c-heading__ja {
+    color: $white;
+  }
+}
+
