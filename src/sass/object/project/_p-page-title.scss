@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.p-page-title {
+    position: relative;
+    background: #feefea;
+    padding-top: rem(76);
+    padding-bottom: rem(27);
+    margin-bottom: rem(30);
+    @include mq("md") {
+        padding-top: rem(132);
+        margin-bottom: rem(77);
+    }
+}
+.p-page-title::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/shape/shape13.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(276);
+    height: rem(153);
+    top: rem(-40);
+    left: calc(50% - #{rem(18)});
+    @include mq("md") {
+        width: rem(594);
+        height: rem(396);
+        top: rem(-80);
+        left: calc(50% + #{rem(246)});
+    }
+}
+.p-page-title::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/shape/shape14.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: rem(30);
+    left: 0;
+    bottom: rem(-30);
+    @include mq("md") {
+        height: rem(77);
+        bottom: rem(-77);
+    }
+}
+
+.p-page-title__heading {
+    margin-top: rem(20);
+    text-align: center;
+    @include mq("md") {
+        margin-top: rem(4);
+    }
+}

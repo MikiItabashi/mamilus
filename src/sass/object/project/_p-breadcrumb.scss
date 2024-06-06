@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.p-breadcrumb {
+    padding: 0 rem(15);
+    @include mq("md") {
+        padding: 0 rem(40);
+    }
+}
+.p-breadcrumb span {
+    font-weight: 700;
+    font-size: rem(10);
+    line-height: 1;
+    letter-spacing: 0.05em;
+    @include mq("md") {
+        font-size: rem(13);
+    }
+}
+.p-breadcrumb span a {
+}

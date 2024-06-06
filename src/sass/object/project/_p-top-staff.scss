@@ -14,19 +14,7 @@
 
 .p-top-staff::before {
   content: "";
-  width: 100%;
-  height: 54%;
-  background-color: $gray;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  @include mq("md") {
-    max-width: 1280px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: rem(60);
-  }
 }
 
 .p-top-staff__shape {
@@ -94,7 +82,6 @@
 }
 
 .p-top-staff__item {
-
 }
 
 .p-top-staff__item:nth-child(even) {
@@ -152,7 +139,6 @@
     font-size: rem(16);
   }
 }
-
 
 .p-top-staff__btn {
   margin-top: rem(23);
