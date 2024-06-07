@@ -3,6 +3,9 @@
 .p-service {
     padding-top: rem(60);
     padding-bottom: rem(84);
+    @include mq("md") {
+        padding-top: rem(140);
+    }
 }
 
 .p-service__inner {
@@ -16,6 +19,12 @@
     display: flex;
     flex-direction: column;
     gap: rem(24);
+    @include mq("md") {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+    }
 }
 .p-service__item::before {
     position: absolute;
@@ -29,18 +38,38 @@
     top: rem(-35);
     right: rem(-67);
     z-index: -1;
+    @include mq("md") {
+        width: rem(599);
+        height: rem(581);
+        top: rem(-30);
+        right: rem(-160);
+    }
 }
 .p-service__item:not(:first-child) {
     margin-top: rem(70);
+    @include mq("md") {
+        margin-top: rem(108);
+    }
 }
 
+.p-service__img {
+    @include mq("md") {
+        width: 55.5%;
+    }
+}
 .p-service__img.--border {
     border-radius: rem(20);
     overflow: hidden;
+    @include mq("md") {
+        border-radius: rem(40);
+    }
 }
 
 .p-service__content {
     position: relative;
+    @include mq("md") {
+        width: 40.8%;
+    }
 }
 
 .p-service__num {
@@ -52,6 +81,9 @@
     letter-spacing: 0.1em;
     top: rem(-6);
     right: rem(-14);
+    @include mq("md") {
+        font-size: rem(128);
+    }
 }
 
 .p-service__subTitle {
@@ -64,6 +96,9 @@
     align-items: center;
     justify-content: flex-start;
     text-transform: uppercase;
+    @include mq("md") {
+        font-size: rem(24);
+    }
 }
 .p-service__subTitle::before {
     content: "";
@@ -73,6 +108,10 @@
     margin-right: rem(10);
     border-radius: 50%;
     background: $pink;
+    @include mq("md") {
+        width: rem(8);
+        height: rem(8);
+    }
 }
 
 .p-service__title {
@@ -81,6 +120,10 @@
     font-size: rem(26);
     letter-spacing: 0.1em;
     font-weight: $semi-bold;
+    @include mq("md") {
+        margin-top: rem(24);
+        font-size: rem(40);
+    }
 }
 
 .p-service__text {
@@ -88,29 +131,54 @@
     font-size: rem(14);
     line-height: calc(56 / 28);
     letter-spacing: 0.07em;
+    @include mq("md") {
+        margin-top: rem(19);
+        font-size: rem(16);
+        line-height: calc(32 / 16);
+    }
 }
 
 .p-service__btn {
     margin-top: rem(23);
+    @include mq("md") {
+        margin-top: rem(33);
+        max-width: rem(320);
+    }
 }
 .p-service__box {
     margin-top: rem(25);
     border: 1px solid #d4d5db;
     border-radius: rem(7);
     padding: rem(10) rem(9);
+    @include mq("md") {
+        border-radius: rem(10);
+        padding: rem(18);
+    }
 }
 .p-service__boxList {
+    @include mq("md") {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(8) rem(39);
+    }
 }
 .p-service__boxItem {
     font-size: rem(14);
     letter-spacing: 0.05em;
     line-height: 1.7;
+    font-weight: 700;
+    @include mq("md") {
+        font-size: rem(16);
+    }
 }
 .p-service__boxItem::before {
     content: "・";
     font-size: rem(18);
     color: $pink;
     line-height: 1;
+    @include mq("md") {
+        font-size: rem(24);
+    }
 }
 .p-service__media {
     background: $gray;
@@ -121,8 +189,11 @@
     flex-direction: column;
     gap: rem(15);
     @include mq("md") {
-        margin-top: rem(18);
+        margin-top: rem(34);
+        padding: rem(20);
+        border-radius: rem(20);
         gap: rem(10);
+        flex-direction: row;
         align-items: center;
     }
 }
@@ -150,6 +221,9 @@
 }
 
 .p-service__item:nth-child(2n) {
+    @include mq("md") {
+        flex-direction: row;
+    }
     &::before {
         background-image: url(../images/shape/shape16.svg);
         width: rem(300);
@@ -157,5 +231,16 @@
         top: rem(-20);
         left: rem(-90);
         right: auto;
+        @include mq("md") {
+            width: rem(484);
+            height: rem(442);
+            left: rem(-160);
+            top: rem(80);
+        }
+    }
+}
+.p-service__item:nth-child(4)::before {
+    @include mq("md") {
+        top: rem(150);
     }
 }
