@@ -57,10 +57,12 @@
 
 .p-events__text {
     margin-top: rem(4);
-    font-weight: 700;
     font-size: rem(12);
     line-height: calc(40 / 24);
     letter-spacing: 0.05em;
     text-align: center;
     font-feature-settings: "palt";
+}
+.p-events__text span {
+    font-weight: $bold;
 }

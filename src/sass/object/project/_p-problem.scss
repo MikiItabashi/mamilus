@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.p-problem {
+    position: relative;
+    margin-top: rem(92);
+    padding-bottom: rem(67);
+}
+
+.p-problem::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/shape/shape21.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(110);
+    height: rem(285);
+    bottom: 15%;
+    left: 0;
+    z-index: -1;
+    @include mq("md") {
+        background-image: url(../images/shape/shape18.svg);
+        // width: rem(594);
+        // height: rem(396);
+        // top: rem(-80);
+        // left: calc(50% + #{rem(246)});
+    }
+}
+
+.p-problem__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: rem(24);
+}
+
+.p-problem__heading {
+    width: rem(56);
+    position: relative;
+    flex-shrink: 0;
+    font-family: $second-font-family;
+    font-size: rem(26);
+    font-weight: $semi-bold;
+    line-height: calc(64 / 52);
+    letter-spacing: 0.1em;
+    writing-mode: vertical-rl;
+    margin-left: rem(9);
+    @include mq("md") {
+        font-size: rem(40);
+        margin-left: rem(40);
+        margin-right: rem(40);
+    }
+}
+.p-problem__heading span.pink {
+    color: $pink;
+}
+.p-problem__heading span:not(.pink) {
+    display: inline-block;
+    margin-top: 3.3em;
+}
+
+.p-problem__heading::after {
+    position: absolute;
+    content: "PROBLEM";
+    font-size: rem(60);
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-family: $en-font-family;
+    opacity: 0.1;
+    top: 0;
+    left: -0.8em;
+    writing-mode: vertical-rl;
+    font-weight: 400;
+    @include mq("md") {
+        font-size: rem(100);
+    }
+}
+
+.p-problem__items {
+    margin-top: rem(12);
+    width: calc(100% - #{rem(56)});
+    display: flex;
+    flex-direction: column;
+    gap: rem(26);
+}
+
+.p-problem__item {
+    position: relative;
+    filter: drop-shadow(0px 0px 20px rgba(4, 0, 0, 0.1));
+    border-radius: rem(14) rem(14) 0 rem(14);
+    background: $white;
+    padding: rem(21) rem(16) rem(12);
+}
+.p-problem__item::before {
+    position: absolute;
+    content: "VOICE";
+    color: $white;
+    background: $dark-blue;
+    font-family: $en-font-family;
+    font-size: rem(11);
+    line-height: 1;
+    letter-spacing: 0.1em;
+    border-radius: rem(14) rem(14) 0 rem(14);
+    top: rem(-10);
+    left: rem(-5);
+    padding: rem(7) rem(9);
+}
+
+.p-problem__main {
+    color: $pink;
+    font-family: $second-font-family;
+    font-size: rem(16);
+    letter-spacing: 0.05em;
+    font-feature-settings: "palt";
+}
+
+.p-problem__text {
+    margin-top: rem(4);
+    font-size: rem(12);
+    line-height: calc(40 / 24);
+    letter-spacing: 0.05em;
+}
+.p-problem__text span {
+    font-weight: $bold;
+}
