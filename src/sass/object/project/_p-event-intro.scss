@@ -1,0 +1,45 @@
+@use "global" as *;
+.p-event-intro {
+    position: relative;
+    padding-top: rem(62);
+    padding-bottom: rem(50);
+}
+
+.p-event-intro::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/shape/shape20.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(207);
+    height: rem(343);
+    bottom: rem(39);
+    right: 0;
+    z-index: -1;
+    @include mq("md") {
+        background-image: url(../images/shape/shape17.svg);
+        // width: rem(594);
+        // height: rem(396);
+        // top: rem(-80);
+        // left: calc(50% + #{rem(246)});
+    }
+}
+.p-event-intro__inner {
+    padding-left: rem(11);
+    padding-right: rem(11);
+}
+.p-event-intro__lead {
+    text-align: center;
+    font-family: $second-font-family;
+    font-weight: $semi-bold;
+    font-size: rem(23);
+    line-height: calc(68 / 46);
+    letter-spacing: 0.05em;
+    span {
+        color: $pink;
+    }
+}
+.p-event-intro__img {
+    margin-top: rem(23);
+}

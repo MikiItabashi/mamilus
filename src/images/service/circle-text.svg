@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="275" height="5856" viewBox="0 0 275 5856">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 21.166px;
+        text-anchor: middle;
+      }
+
+      .cls-2 {
+        fill: #292f4a;
+        font-family: Marcellus;
+      }
+    </style>
+    <path id="text-path" d="Z"/>
+  </defs>
+  <text id="circle-text.svg" class="cls-1" transform="scale(0.764)"><textPath startOffset="50%" xlink:href="#text-path"><tspan class="cls-2">Event report updated from time to time</tspan></textPath></text>
+</svg>
