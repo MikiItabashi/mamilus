@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.p-events {
+}
+
+.p-events__inner {
+}
+
+.p-events__box {
+    position: relative;
+    background: #e9f4f3;
+    border-radius: rem(30);
+    padding: rem(42) rem(22);
+}
+
+.p-events__box::after {
+    content: "EVENTS";
+    font-size: rem(60);
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-family: $en-font-family;
+    color: $white;
+    opacity: 0.8;
+    position: absolute;
+    bottom: -0.25em;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq("md") {
+        font-size: rem(100);
+    }
+}
+
+.p-events__title {
+    text-align: center;
+    font-family: $second-font-family;
+    font-size: rem(22);
+    line-height: calc(68 / 44);
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+.p-events__items {
+    margin-top: rem(23);
+    display: grid;
+    gap: rem(25) 0;
+    grid-template-columns: 1fr 1fr;
+}
+
+.p-events__item {
+}
+
+.p-events__img img {
+    filter: drop-shadow(0px 0px 20px rgba(185, 185, 182, 0.3));
+    max-width: max(rem(90), 50%);
+    margin: 0 auto;
+}
+
+.p-events__text {
+    margin-top: rem(4);
+    font-weight: 700;
+    font-size: rem(12);
+    line-height: calc(40 / 24);
+    letter-spacing: 0.05em;
+    text-align: center;
+    font-feature-settings: "palt";
+}
