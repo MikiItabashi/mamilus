@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.p-contact {
+    margin-top: rem(92);
+}
+
+.p-contact__inner {
+}
+
+.p-contact__box {
+    position: relative;
+    background-image: url(../images/common/contact-bg-sp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(40) rem(10) rem(46);
+    border-radius: rem(30);
+}
+.p-contact__box::before {
+    position: absolute;
+    content: "";
+    width: calc(100% - #{rem(15)});
+    height: calc(100% - #{rem(15)});
+    background: transparent;
+    pointer-events: none;
+    border: 1px solid $white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: rem(30);
+}
+
+.p-contact__heading {
+    text-align: center;
+}
+
+.p-contact__text {
+    margin-top: rem(21);
+    text-align: center;
+    font-size: rem(12);
+    line-height: calc(48 / 24);
+}
+
+.p-contact__btn {
+    margin-top: rem(24);
+    text-align: center;
+    .c-arrow-btn {
+        font-feature-settings: "palt";
+    }
+}
