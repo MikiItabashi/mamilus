@@ -5,6 +5,11 @@
     margin-top: rem(92);
     padding-bottom: rem(67);
     overflow: hidden;
+    @include mq("md") {
+        margin-top: 0;
+        padding-top: rem(156);
+        padding-bottom: rem(118);
+    }
 }
 
 .p-problem::before {
@@ -20,11 +25,10 @@
     left: 0;
     z-index: -1;
     @include mq("md") {
-        background-image: url(../images/shape/shape18.svg);
-        // width: rem(594);
-        // height: rem(396);
-        // top: rem(-80);
-        // left: calc(50% + #{rem(246)});
+        background-image: url(../images/shape/shape18.png);
+        width: rem(291);
+        height: rem(574);
+        bottom: 10%;
     }
 }
 
@@ -33,6 +37,10 @@
     align-items: flex-start;
     justify-content: center;
     gap: rem(24);
+    @include mq("md") {
+        justify-content: space-between;
+        gap: rem(112);
+    }
 }
 
 .p-problem__heading {
@@ -47,9 +55,8 @@
     writing-mode: vertical-rl;
     margin-left: rem(9);
     @include mq("md") {
+        width: rem(199);
         font-size: rem(40);
-        margin-left: rem(40);
-        margin-right: rem(40);
     }
 }
 .p-problem__heading span.pink {
@@ -58,6 +65,9 @@
 .p-problem__heading span:not(.pink) {
     display: inline-block;
     margin-top: 3.3em;
+    @include mq("md") {
+        margin-right: 0.4em;
+    }
 }
 
 .p-problem__heading::after {
@@ -74,6 +84,8 @@
     font-weight: 400;
     @include mq("md") {
         font-size: rem(100);
+        left: -0.2em;
+        top: rem(14);
     }
 }
 
@@ -83,14 +95,28 @@
     display: flex;
     flex-direction: column;
     gap: rem(26);
+    @include mq("md") {
+        margin-top: rem(27);
+        width: calc(100% - #{rem(199)} - #{rem(112)});
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: rem(48) rem(60);
+    }
 }
 
 .p-problem__item {
     position: relative;
-    filter: drop-shadow(0px 0px 20px rgba(4, 0, 0, 0.1));
+    filter: drop-shadow(0px 0px 10px rgba(4, 0, 0, 0.1));
     border-radius: rem(14) rem(14) 0 rem(14);
     background: $white;
     padding: rem(21) rem(16) rem(12);
+    @include mq("md") {
+        width: calc((100% - #{rem(60)}) / 2);
+        border-radius: rem(30) rem(30) 0 rem(30);
+        filter: drop-shadow(0px 0px 20px rgba(4, 0, 0, 0.1));
+        padding: rem(23) rem(19) rem(34) rem(90);
+        height: fit-content;
+    }
 }
 .p-problem__item::before {
     position: absolute;
@@ -105,6 +131,16 @@
     top: rem(-10);
     left: rem(-5);
     padding: rem(7) rem(9);
+    @include mq("md") {
+        font-size: rem(18);
+        border-radius: rem(37) rem(37) 0 rem(37);
+        padding: rem(28) rem(9);
+        top: rem(-20);
+        left: rem(-20);
+    }
+}
+.p-problem__item:nth-child(2n) {
+    margin-top: rem(38);
 }
 
 .p-problem__main {
@@ -113,6 +149,9 @@
     font-size: rem(16);
     letter-spacing: 0.05em;
     font-feature-settings: "palt";
+    @include mq("md") {
+        font-size: rem(24);
+    }
 }
 
 .p-problem__text {
@@ -120,6 +159,10 @@
     font-size: rem(12);
     line-height: calc(40 / 24);
     letter-spacing: 0.05em;
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: calc(26 / 16);
+    }
 }
 .p-problem__text span {
     font-weight: $bold;

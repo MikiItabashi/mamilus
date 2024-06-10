@@ -3,6 +3,10 @@
     position: relative;
     padding-top: rem(62);
     padding-bottom: rem(50);
+    @include mq("md") {
+        padding-top: rem(80);
+        padding-bottom: rem(120);
+    }
 }
 
 .p-event-intro::before {
@@ -19,15 +23,17 @@
     z-index: -1;
     @include mq("md") {
         background-image: url(../images/shape/shape17.svg);
-        // width: rem(594);
-        // height: rem(396);
-        // top: rem(-80);
-        // left: calc(50% + #{rem(246)});
+        width: rem(320);
+        height: rem(471);
+        bottom: rem(10);
     }
 }
-.p-event-intro__inner {
+.p-event-intro__inner.l-inner {
     padding-left: rem(11);
     padding-right: rem(11);
+    @include mq("md") {
+        max-width: rem(1620);
+    }
 }
 .p-event-intro__lead {
     text-align: center;
@@ -39,7 +45,14 @@
     span {
         color: $pink;
     }
+    @include mq("md") {
+        font-size: rem(40);
+        line-height: calc(64 / 40);
+    }
 }
 .p-event-intro__img {
     margin-top: rem(23);
+    @include mq("md") {
+        margin-top: rem(48);
+    }
 }
