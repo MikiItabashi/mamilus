@@ -1,440 +1,700 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex" />
+    <!-- meta情報 -->
+    <title>Mamilus</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- ファビコン -->
+    <link rel="”icon”" href="" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="robots" content="noindex" />
-  <!-- meta情報 -->
-  <title>Mamilus</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <!-- ファビコン -->
-  <link rel="”icon”" href="" />
-  <!-- google font  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@100..900&display=swap"
-    rel="stylesheet" />
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./assets/js/script.js"></script>
-  <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-</head>
+  <body>
+    <header id="js-header" class="p-header">
+      <div class="p-header__inner l-inner">
+        <div class="p-header__left">
+          <div class="p-header__logo">
+            <a href="#">
+              <img src="./assets/images/common/logo.svg" alt="Mamilus" />
+            </a>
+          </div>
+          <p class="p-header__desc">
+            埼⽟を中⼼とした企業・⾏政の<br
+              class="u-mobile"
+            />イベント企画・プロモーション<br />株式会社マミラス
+          </p>
+        </div>
+        <div class="p-header__right">
+          <nav class="p-header__nav">
+            <ul class="p-header__nav-list">
+              <li class="p-header__nav-item"><a href="#">トップ</a></li>
+              <li class="p-header__nav-item"><a href="#">事業紹介</a></li>
+              <li class="p-header__nav-item"><a href="#">SDGsの取り組み</a></li>
+              <li class="p-header__nav-item">
+                <a href="#">お知らせ・レポート</a>
+              </li>
+              <li class="p-header__nav-item"><a href="#">スタッフ紹介</a></li>
+              <li class="p-header__nav-item"><a href="#">会社情報</a></li>
+            </ul>
+          </nav>
+          <div class="p-header__btn">
+            <a href="#" class="c-contact-btn">お問い合わせ</a>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="js-hamburger"
+          class="p-header__hamburger"
+          aria-controls="js-drawer"
+          aria-expanded="false"
+        >
+          <span class="p-header__hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span id="js-hamburger-text" class="p-header__hamburger-text"
+            >MENU</span
+          >
+        </button>
+        <div id="js-drawer" class="p-drawer" aria-hidden="true">
+          <nav class="p-drawer__nav">
+            <ul class="p-drawer__nav-list">
+              <li class="p-drawer__nav-item"><a href="#">トップ</a></li>
+              <li class="p-drawer__nav-item"><a href="#">事業紹介</a></li>
+              <li class="p-drawer__nav-item"><a href="#">SDGsの取り組み</a></li>
+              <li class="p-drawer__nav-item">
+                <a href="#">お知らせ・レポート</a>
+              </li>
+              <li class="p-drawer__nav-item"><a href="#">スタッフ紹介</a></li>
+              <li class="p-drawer__nav-item"><a href="#">会社情報</a></li>
+            </ul>
+          </nav>
+          <div class="p-drawer__btn">
+            <a href="#" class="c-contact-btn">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="l-main">
+      <section class="p-page-title">
+        <div class="p-page-title__breadcrumb p-breadcrumb">
+          <span>
+            <a href="#" class="home">
+              <span property="name">TOP</span>
+            </a>
+          </span>
+          <span>
+            <span property="name" class="post post-page current-item"
+              >事業紹介</span
+            >
+          </span>
+        </div>
+        <div class="p-page-title__inner l-inner">
+          <div class="p-page-title__heading c-heading">
+            <p class="c-heading__en">EVENT</p>
+            <h1 class="c-heading__ja">イベント企画</h1>
+          </div>
+        </div>
+      </section>
 
-<body>
-  <header id="js-header" class="p-header">
-    <div class="p-header__inner l-inner">
-      <div class="p-header__left">
-        <div class="p-header__logo">
-          <a href="#">
-            <img src="./assets/images/common/logo.svg" alt="Mamilus" />
-          </a>
-        </div>
-        <p class="p-header__desc">
-          埼⽟を中⼼とした企業・⾏政の<br class="u-mobile" />イベント企画・プロモーション<br />株式会社マミラス
-        </p>
-      </div>
-      <div class="p-header__right">
-        <nav class="p-header__nav">
-          <ul class="p-header__nav-list">
-            <li class="p-header__nav-item"><a href="#">トップ</a></li>
-            <li class="p-header__nav-item"><a href="#">事業紹介</a></li>
-            <li class="p-header__nav-item"><a href="#">SDGsの取り組み</a></li>
-            <li class="p-header__nav-item">
-              <a href="#">お知らせ・レポート</a>
-            </li>
-            <li class="p-header__nav-item"><a href="#">スタッフ紹介</a></li>
-            <li class="p-header__nav-item"><a href="#">会社情報</a></li>
-          </ul>
-        </nav>
-        <div class="p-header__btn">
-          <a href="#" class="c-contact-btn">お問い合わせ</a>
+      <div class="p-event-intro">
+        <div class="p-event-intro__inner l-inner">
+          <p class="p-event-intro__lead">
+            イベント企画・実⾏・集客を<br
+              class="u-mobile"
+            />ワンストップで提供<br />
+            貴社の<span>“プロモーション”</span>を<br
+              class="u-mobile"
+            />成功に導きます
+          </p>
+          <div class="p-event-intro__img">
+            <picture>
+              <source
+                srcset="./assets/images/service/intro-img.png"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="./assets/images/service/intro-img-sp.png"
+                alt="イベントの様子"
+              />
+            </picture>
+          </div>
         </div>
       </div>
-      <button type="button" id="js-hamburger" class="p-header__hamburger" aria-controls="js-drawer"
-        aria-expanded="false">
-        <span class="p-header__hamburger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <span id="js-hamburger-text" class="p-header__hamburger-text">MENU</span>
-      </button>
-      <div id="js-drawer" class="p-drawer" aria-hidden="true">
-        <nav class="p-drawer__nav">
-          <ul class="p-drawer__nav-list">
-            <li class="p-drawer__nav-item"><a href="#">トップ</a></li>
-            <li class="p-drawer__nav-item"><a href="#">事業紹介</a></li>
-            <li class="p-drawer__nav-item"><a href="#">SDGsの取り組み</a></li>
-            <li class="p-drawer__nav-item">
-              <a href="#">お知らせ・レポート</a>
-            </li>
-            <li class="p-drawer__nav-item"><a href="#">スタッフ紹介</a></li>
-            <li class="p-drawer__nav-item"><a href="#">会社情報</a></li>
-          </ul>
-        </nav>
-        <div class="p-drawer__btn">
-          <a href="#" class="c-contact-btn">お問い合わせ</a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main class="l-main">
-    <section class="p-page-title">
-      <div class="p-page-title__breadcrumb p-breadcrumb">
-        <span>
-          <a href="#" class="home">
-            <span property="name">TOP</span>
-          </a>
-        </span>
-        <span>
-          <span property="name" class="post post-page current-item">事業紹介</span>
-        </span>
-      </div>
-      <div class="p-page-title__inner l-inner">
-        <div class="p-page-title__heading c-heading">
-          <p class="c-heading__en">EVENT</p>
-          <h1 class="c-heading__ja">イベント企画</h1>
-        </div>
-    </section>
 
-    <div class="p-event-intro">
-      <div class="p-event-intro__inner l-inner">
-        <p class="p-event-intro__lead">イベント企画・実⾏・集客を<br class="u-mobile">ワンストップで提供<br>
-          貴社の<span>“プロモーション”</span>を<br class="u-mobile">成功に導きます</p>
-        <div class="p-event-intro__img">
-          <picture>
-            <source srcset='./assets/images/service/intro-img.png' media='(min-width: 768px)' />
-            <img src='./assets/images/service/intro-img-sp.png' alt='イベントの様子' />
-          </picture>
-        </div>
-      </div>
-    </div>
-
-    <section class="p-events">
-      <div class="p-events__inner l-inner">
-        <div class="p-events__box">
-          <h2 class="p-events__title">こんなイベント開催が<br class="u-mobile">得意です</h2>
-          <div class="p-events__items">
-            <div class="p-events__item">
-              <div class="p-events__img">
-                <img src="./assets/images/service/event-icon01.svg" alt="風船アイコン" />
+      <section class="p-events">
+        <div class="p-events__inner l-inner">
+          <div class="p-events__box">
+            <h2 class="p-events__title">
+              こんなイベント開催が<br class="u-mobile" />得意です
+            </h2>
+            <div class="p-events__items">
+              <div class="p-events__item">
+                <div class="p-events__img">
+                  <img
+                    src="./assets/images/service/event-icon01.svg"
+                    alt="風船アイコン"
+                  />
+                </div>
+                <p class="p-events__text">
+                  ショッピングモールでの<br />
+                  販促イベント
+                </p>
               </div>
-              <p class="p-events__text">ショッピングモールでの<br>
-                販促イベント</p>
-            </div>
-            <div class="p-events__item">
-              <div class="p-events__img">
-                <img src="./assets/images/service/event-icon02.svg" alt="展⽰場アイコン" />
+              <div class="p-events__item">
+                <div class="p-events__img">
+                  <img
+                    src="./assets/images/service/event-icon02.svg"
+                    alt="展⽰場アイコン"
+                  />
+                </div>
+                <p class="p-events__text">
+                  住宅展⽰場での<br />
+                  集客イベント
+                </p>
               </div>
-              <p class="p-events__text">住宅展⽰場での<br>
-                集客イベント</p>
-            </div>
-            <div class="p-events__item">
-              <div class="p-events__img">
-                <img src="./assets/images/service/event-icon03.svg" alt="建物アイコン" />
+              <div class="p-events__item">
+                <div class="p-events__img">
+                  <img
+                    src="./assets/images/service/event-icon03.svg"
+                    alt="建物アイコン"
+                  />
+                </div>
+                <p class="p-events__text">
+                  福利厚⽣などの<br />
+                  社内イベント
+                </p>
               </div>
-              <p class="p-events__text">福利厚⽣などの<br>
-                社内イベント</p>
-            </div>
-            <div class="p-events__item">
-              <div class="p-events__img">
-                <img src="./assets/images/service/event-icon04.svg" alt="グルメアイコン" />
+              <div class="p-events__item">
+                <div class="p-events__img">
+                  <img
+                    src="./assets/images/service/event-icon04.svg"
+                    alt="グルメアイコン"
+                  />
+                </div>
+                <p class="p-events__text">グルメイベント</p>
               </div>
-              <p class="p-events__text">グルメイベント</p>
-            </div>
-            <div class="p-events__item">
-              <div class="p-events__img">
-                <img src="./assets/images/service/event-icon05.svg" alt="ステージアイコン" />
+              <div class="p-events__item">
+                <div class="p-events__img">
+                  <img
+                    src="./assets/images/service/event-icon05.svg"
+                    alt="ステージアイコン"
+                  />
+                </div>
+                <p class="p-events__text">
+                  ステージ・<br />
+                  パフォーマンス
+                </p>
               </div>
-              <p class="p-events__text">ステージ・<br>
-                パフォーマンス</p>
-            </div>
-            <div class="p-events__item">
-              <div class="p-events__img">
-                <img src="./assets/images/service/event-icon06.svg" alt="セミナーアイコン" />
+              <div class="p-events__item">
+                <div class="p-events__img">
+                  <img
+                    src="./assets/images/service/event-icon06.svg"
+                    alt="セミナーアイコン"
+                  />
+                </div>
+                <p class="p-events__text">セミナー・講座</p>
               </div>
-              <p class="p-events__text">セミナー・講座</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="p-problem">
-      <div class="p-problem__inner l-inner">
-        <h2 class="p-problem__heading">こんな<span class="pink">お悩み</span><br><span>抱えていませんか？</span></h2>
-        <div class="p-problem__items">
-          <div class="p-problem__item">
-            <p class="p-problem__main">売り上げをあげたい…</p>
-            <p class="p-problem__text"><span>来⽉の売り上げが⾜りない！</span><br>
-              新規の⾒込客を集客するにはイベントプロモーションをかけたいが、これから間に合うだろうか。</p>
-          </div>
-          <div class="p-problem__item">
-            <p class="p-problem__main">社内だけでは⼤変…</p>
-            <p class="p-problem__text">イベントをやりたいが、<span>企画や仕込みの仕⽅がよくわからない。</span><br>
-              職場内だけで成功させるには限界がある。</p>
-          </div>
-          <div class="p-problem__item">
-            <p class="p-problem__main">実際⼈は集まるのか…</p>
-            <p class="p-problem__text">イベントを開催したはいいが、<span>集客がまったくだめだった。</span><br>
-              集まらなければ意味がなし、次は本社からもう予算が取れなくなりそうだ。</p>
-          </div>
-          <div class="p-problem__item">
-            <p class="p-problem__main">出店・演者・講師は…</p>
-            <p class="p-problem__text"><span>パフォーマンスや出店、講師になってくれる⼈が全然⾒つからない。</span><br>
-              企画倒れしそうで、知り合いにあたってはいるが、胃が痛い。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="p-reason">
-      <div class="p-reason__inner l-inner">
-        <p class="p-reason__subTitle">イベント企画はマミラスにお任せください</p>
-        <h2 class="p-reason__title">マミラスが選ばれる理由</h2>
-        <div class="p-reason__items">
-          <div class="p-reason__item">
-            <p class="p-reason__num">reason<span>01</span></p>
-            <div class="p-reason__img">
-              <img src="./assets/images/service/reason01.jpg" alt="ワークショップ系ベントの様子" />
+      <section class="p-problem">
+        <div class="p-problem__inner l-inner">
+          <h2 class="p-problem__heading">
+            こんな<span class="pink">お悩み</span><br /><span
+              >抱えていませんか？</span
+            >
+          </h2>
+          <div class="p-problem__items">
+            <div class="p-problem__item">
+              <p class="p-problem__main">売り上げをあげたい…</p>
+              <p class="p-problem__text">
+                <span>来⽉の売り上げが⾜りない！</span><br />
+                新規の⾒込客を集客するにはイベントプロモーションをかけたいが、これから間に合うだろうか。
+              </p>
             </div>
-            <div class="p-reason__content">
-              <h3 class="p-reason__main">企画・実⾏・運営まで<br>
-                <span>ワンストップ！</span><br>
-                スピーディーで⾼品質</h3>
-              <p class="p-reason__text">原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。</p>
+            <div class="p-problem__item">
+              <p class="p-problem__main">社内だけでは⼤変…</p>
+              <p class="p-problem__text">
+                イベントをやりたいが、<span
+                  >企画や仕込みの仕⽅がよくわからない。</span
+                ><br />
+                職場内だけで成功させるには限界がある。
+              </p>
             </div>
-          </div>
-          <div class="p-reason__item">
-            <p class="p-reason__num">reason<span>02</span></p>
-            <div class="p-reason__img">
-              <img src="./assets/images/service/reason02.jpg" alt="地域コミュニティの様子" />
+            <div class="p-problem__item">
+              <p class="p-problem__main">実際⼈は集まるのか…</p>
+              <p class="p-problem__text">
+                イベントを開催したはいいが、<span
+                  >集客がまったくだめだった。</span
+                ><br />
+                集まらなければ意味がなし、次は本社からもう予算が取れなくなりそうだ。
+              </p>
             </div>
-            <div class="p-reason__content">
-              <h3 class="p-reason__main">マミラスが持つ<span>30,000⼈の</span><br>
-                <span>地域コミュニティ</span>による<br>
-                強⼒な集客⼒</h3>
-              <p class="p-reason__text">原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。</p>
-            </div>
-          </div>
-          <div class="p-reason__item">
-            <p class="p-reason__num">reason<span>03</span></p>
-            <div class="p-reason__img">
-              <img src="./assets/images/service/reason03.jpg" alt="創業支援の様子" />
-            </div>
-            <div class="p-reason__content">
-              <h3 class="p-reason__main"><span>⼥性起業家800名</span>から<br>
-                ベストな講師・<br>
-                出店のアサインが可能</h3>
-              <p class="p-reason__text">原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="p-contact">
-      <div class="p-contact__inner l-inner">
-        <div class="p-contact__box">
-          <div class="p-contact__heading c-heading">
-            <p class="c-heading__en">CONTACT</p>
-            <h2 class="c-heading__ja">お問い合わせ</h2>
-          </div>
-          <p class="p-contact__text">イベント企画・運営・プロモーションなど、<br>
-            お気軽にお問い合わせください。</p>
-          <div class="p-contact__btn">
-            <a href="#" class="c-arrow-btn">ご相談・お⾒積り・お問い合わせ</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="p-results">
-      <div class="p-results__inner l-inner">
-        <div class="p-results__heading c-heading">
-          <p class="c-heading__en">EVENT RESULTS</p>
-          <h2 class="c-heading__ja">イベント開催事例</h2>
-        </div>
-        <div class="p-results__items">
-          <div class="p-results__item">
-            <div class="p-results__img">
-              <img src="./assets/images/service/results01.jpg" alt="イベントの様子" />
-            </div>
-            <div class="p-results__content">
-              <p class="p-results__company">〇〇〇〇社様</p>
-              <h3 class="p-results__title">〇〇〇〇イベント開催</h3>
-              <p class="p-results__text">原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。</p>
-            </div>
-          </div>
-          <div class="p-results__item">
-            <div class="p-results__img">
-              <img src="./assets/images/service/results02.jpg" alt="イベントの様子" />
-            </div>
-            <div class="p-results__content">
-              <p class="p-results__company">〇〇〇〇社様</p>
-              <h3 class="p-results__title">〇〇〇〇イベント開催</h3>
-              <p class="p-results__text">原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。</p>
-            </div>
-          </div>
-          <div class="p-results__item">
-            <div class="p-results__img">
-              <img src="./assets/images/service/results03.jpg" alt="イベントの様子" />
-            </div>
-            <div class="p-results__content">
-              <p class="p-results__company">〇〇〇〇社様</p>
-              <h3 class="p-results__title">〇〇〇〇イベント開催</h3>
-              <p class="p-results__text">原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。</p>
-            </div>
-          </div>
-        </div>
-        <div class="p-results__box">
-          <h3 class="p-results__boxTitle">主な開催企業実績</h3>
-          <p class="p-results__list">イオンモール／アリオ／モラージュ菖蒲／ベニバナウォーク／まるひろ百貨店／総合住宅展⽰場ハウジングステージ／アイ⼯務店／ポラスの分譲住宅／アイダ設計／ミサワホーム／セコムホームライフ／メットライフ⽣命／ジブラルタ⽣命／プルデンシャル⽣命保険 他</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="p-report">
-      <div class="p-report__inner l-inner">
-        <div class="p-report__box">
-          <p class="p-report__text">開催レポートは<br class="u-mibile">随時更新しています！<br>
-            ぜひチェックして<br class="u-mibile">みてください！</p>
-          <div class="p-report__btn">
-            <a href="#" class="c-arrow-btn">その他の開催事例を⾒る</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <section class="p-cta">
-      <div class="l-inner">
-        <div class="p-cta__heading c-heading --white">
-          <p class="c-heading__en">CONTACT</p>
-          <h2 class="c-heading__ja">お問い合わせ</h2>
-        </div>
-        <p class="p-cta__text">
-          イベント企画・運営・プロモーションなど、<br>
-          お気軽にお問い合わせください。
-        </p>
-        <div class="p-cta__btn">
-          <a href="#" class="c-arrow-btn --white">ご相談・お⾒積り・お問い合わせ</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="p-footer">
-    <div class="p-footer__block1">
-      <div class="l-inner">
-        <div class="p-fooer__above-wrapper">
-          <div class="p-footer__info">
-            <div class="p-footer__logo">
-              <a href="#">
-                <img src="./assets/images/common/logo.svg" alt="Mamilus" />
-              </a>
-            </div>
-            <div class="p-footer__company">
-              <p class="p-footer__company-name">株式会社マミラス</p>
-              <p class="p-footer__company-address">
-                <span>〒332-0012&nbsp;</span><span>埼玉県川口市本町4丁目3-14 小峰第一ビル4F-J5</span>
+            <div class="p-problem__item">
+              <p class="p-problem__main">出店・演者・講師は…</p>
+              <p class="p-problem__text">
+                <span
+                  >パフォーマンスや出店、講師になってくれる⼈が全然⾒つからない。</span
+                ><br />
+                企画倒れしそうで、知り合いにあたってはいるが、胃が痛い。
               </p>
             </div>
           </div>
-          <nav class="p-footer__nav">
-            <ul class="p-footer__nav-list">
-              <li class="p-footer__nav-item"><a href="#">トップ</a></li>
-              <li class="p-footer__nav-item"><a href="#">事業紹介</a></li>
-              <li class="p-footer__nav-item">
-                <a href="#">SDGsの取り組み</a>
+        </div>
+      </section>
+
+      <section class="p-reason">
+        <div class="p-reason__inner l-inner">
+          <p class="p-reason__subTitle">
+            イベント企画はマミラスにお任せください
+          </p>
+          <h2 class="p-reason__title">マミラスが選ばれる理由</h2>
+          <div class="p-reason__items">
+            <div class="p-reason__item">
+              <p class="p-reason__num">reason<span>01</span></p>
+              <div class="p-reason__img">
+                <img
+                  src="./assets/images/service/reason01.jpg"
+                  alt="ワークショップ系ベントの様子"
+                />
+              </div>
+              <div class="p-reason__content">
+                <h3 class="p-reason__main">
+                  企画・実⾏・運営まで<br />
+                  <span>ワンストップ！</span><br />
+                  スピーディーで⾼品質
+                </h3>
+                <p class="p-reason__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+            <div class="p-reason__item">
+              <p class="p-reason__num">reason<span>02</span></p>
+              <div class="p-reason__img">
+                <img
+                  src="./assets/images/service/reason02.jpg"
+                  alt="地域コミュニティの様子"
+                />
+              </div>
+              <div class="p-reason__content">
+                <h3 class="p-reason__main">
+                  マミラスが持つ<span>30,000⼈の</span><br />
+                  <span>地域コミュニティ</span>による<br />
+                  強⼒な集客⼒
+                </h3>
+                <p class="p-reason__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+            <div class="p-reason__item">
+              <p class="p-reason__num">reason<span>03</span></p>
+              <div class="p-reason__img">
+                <img
+                  src="./assets/images/service/reason03.jpg"
+                  alt="創業支援の様子"
+                />
+              </div>
+              <div class="p-reason__content">
+                <h3 class="p-reason__main">
+                  <span>⼥性起業家800名</span>から<br />
+                  ベストな講師・<br />
+                  出店のアサインが可能
+                </h3>
+                <p class="p-reason__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-contact">
+        <div class="p-contact__inner l-inner">
+          <div class="p-contact__box">
+            <div class="p-contact__heading c-heading">
+              <p class="c-heading__en">CONTACT</p>
+              <h2 class="c-heading__ja">お問い合わせ</h2>
+            </div>
+            <p class="p-contact__text">
+              イベント企画・運営・プロモーションなど、<br />
+              お気軽にお問い合わせください。
+            </p>
+            <div class="p-contact__btn">
+              <a href="#" class="c-arrow-btn">ご相談・お⾒積り・お問い合わせ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-results">
+        <div class="p-results__inner l-inner">
+          <div class="p-results__heading c-heading">
+            <p class="c-heading__en">EVENT RESULTS</p>
+            <h2 class="c-heading__ja">イベント開催事例</h2>
+          </div>
+          <div class="p-results__items">
+            <div class="p-results__item">
+              <div class="p-results__img">
+                <img
+                  src="./assets/images/service/results01.jpg"
+                  alt="イベントの様子"
+                />
+              </div>
+              <div class="p-results__content">
+                <p class="p-results__company">〇〇〇〇社様</p>
+                <h3 class="p-results__title">〇〇〇〇イベント開催</h3>
+                <p class="p-results__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+            <div class="p-results__item">
+              <div class="p-results__img">
+                <img
+                  src="./assets/images/service/results02.jpg"
+                  alt="イベントの様子"
+                />
+              </div>
+              <div class="p-results__content">
+                <p class="p-results__company">〇〇〇〇社様</p>
+                <h3 class="p-results__title">〇〇〇〇イベント開催</h3>
+                <p class="p-results__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+            <div class="p-results__item">
+              <div class="p-results__img">
+                <img
+                  src="./assets/images/service/results03.jpg"
+                  alt="イベントの様子"
+                />
+              </div>
+              <div class="p-results__content">
+                <p class="p-results__company">〇〇〇〇社様</p>
+                <h3 class="p-results__title">〇〇〇〇イベント開催</h3>
+                <p class="p-results__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-results__box">
+            <h3 class="p-results__boxTitle">主な開催企業実績</h3>
+            <p class="p-results__list">
+              イオンモール／アリオ／モラージュ菖蒲／ベニバナウォーク／まるひろ百貨店／総合住宅展⽰場ハウジングステージ／アイ⼯務店／ポラスの分譲住宅／アイダ設計／ミサワホーム／セコムホームライフ／メットライフ⽣命／ジブラルタ⽣命／プルデンシャル⽣命保険
+              他
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="p-report">
+        <div class="p-report__inner l-inner">
+          <div class="p-report__box">
+            <p class="p-report__text">
+              開催レポートは<br class="u-mibile" />随時更新しています！<br />
+              ぜひチェックして<br class="u-mibile" />みてください！
+            </p>
+            <div class="p-report__btn">
+              <a href="#" class="c-arrow-btn">その他の開催事例を⾒る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="p-flow">
+        <div class="p-flow__inner l-inner">
+          <div class="p-flow__heading c-heading">
+            <p class="c-heading__en">FLOW</p>
+            <h2 class="c-heading__ja">ご発注から開催までの流れ</h2>
+          </div>
+          <div class="p-flow__items">
+            <div class="p-flow__item">
+              <div class="p-flow__img">
+                <div class="p-flow__num">step<span>01</span></div>
+                <img
+                  src="./assets/images/service/flow01.jpg"
+                  alt="イベントの様子"
+                />
+              </div>
+              <div class="p-flow__content">
+                <h3 class="p-flow__main">お打ち合わせ</h3>
+                <p class="p-flow__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+            <div class="p-flow__item">
+              <div class="p-flow__img">
+                <div class="p-flow__num">step<span>02</span></div>
+                <img
+                  src="./assets/images/service/flow02.jpg"
+                  alt="企画のご提案・お⾒積もりの様子"
+                />
+              </div>
+              <div class="p-flow__content">
+                <h3 class="p-flow__main">
+                  企画のご提案・<br class="u-mobile" />お⾒積もり
+                </h3>
+                <p class="p-flow__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+            <div class="p-flow__item">
+              <div class="p-flow__img">
+                <div class="p-flow__num">step<span>03</span></div>
+                <img
+                  src="./assets/images/service/flow03.jpg"
+                  alt="ご発注・準備スタートの様子"
+                />
+              </div>
+              <div class="p-flow__content">
+                <h3 class="p-flow__main">
+                  ご発注・<br class="u-mobile" />準備スタート
+                </h3>
+                <p class="p-flow__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+            <div class="p-flow__item">
+              <div class="p-flow__img">
+                <div class="p-flow__num">step<span>04</span></div>
+                <img
+                  src="./assets/images/service/flow04.jpg"
+                  alt="告知作成・集客補助の様子"
+                />
+              </div>
+              <div class="p-flow__content">
+                <h3 class="p-flow__main">告知作成・集客補助</h3>
+                <p class="p-flow__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+            <div class="p-flow__item">
+              <div class="p-flow__img">
+                <div class="p-flow__num">step<span>05</span></div>
+                <img
+                  src="./assets/images/service/flow05.jpg"
+                  alt="イベントの実施・撤収の様子"
+                />
+              </div>
+              <div class="p-flow__content">
+                <h3 class="p-flow__main">
+                  イベントの実施・<br class="u-mobile" />撤収
+                </h3>
+                <p class="p-flow__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-cta">
+        <div class="l-inner">
+          <div class="p-cta__heading c-heading --white">
+            <p class="c-heading__en">CONTACT</p>
+            <h2 class="c-heading__ja">お問い合わせ</h2>
+          </div>
+          <p class="p-cta__text">
+            イベント企画・運営・プロモーションなど、<br />
+            お気軽にお問い合わせください。
+          </p>
+          <div class="p-cta__btn">
+            <a href="#" class="c-arrow-btn --white"
+              >ご相談・お⾒積り・お問い合わせ</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p-footer">
+      <div class="p-footer__block1">
+        <div class="l-inner">
+          <div class="p-fooer__above-wrapper">
+            <div class="p-footer__info">
+              <div class="p-footer__logo">
+                <a href="#">
+                  <img src="./assets/images/common/logo.svg" alt="Mamilus" />
+                </a>
+              </div>
+              <div class="p-footer__company">
+                <p class="p-footer__company-name">株式会社マミラス</p>
+                <p class="p-footer__company-address">
+                  <span>〒332-0012&nbsp;</span
+                  ><span>埼玉県川口市本町4丁目3-14 小峰第一ビル4F-J5</span>
+                </p>
+              </div>
+            </div>
+            <nav class="p-footer__nav">
+              <ul class="p-footer__nav-list">
+                <li class="p-footer__nav-item"><a href="#">トップ</a></li>
+                <li class="p-footer__nav-item"><a href="#">事業紹介</a></li>
+                <li class="p-footer__nav-item">
+                  <a href="#">SDGsの取り組み</a>
+                </li>
+                <li class="p-footer__nav-item">
+                  <a href="#">お知らせ・レポート</a>
+                </li>
+                <li class="p-footer__nav-item"><a href="#">スタッフ紹介</a></li>
+                <li class="p-footer__nav-item"><a href="#">会社情報</a></li>
+                <li class="p-footer__nav-item"><a href="#">お問い合わせ</a></li>
+                <li class="p-footer__nav-item">
+                  <a href="#">プライバシーポリシー</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="p-footer__block2">
+        <div class="l-inner">
+          <div class="p-footer__block2-wrapper">
+            <p class="p-footer__block2-title">運⽤メディア・運⽤事業</p>
+            <ul class="p-footer__media">
+              <li class="p-footer__media-item">
+                <a
+                  href="https://saitama-mama.com/"
+                  class="p-footer__media-logo"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/images/common/media-logo01.png"
+                    alt="埼玉ママ情報"
+                  />
+                </a>
+                <ul class="p-footer__sns p-sns">
+                  <li class="p-sns__item">
+                    <a
+                      href="https://www.facebook.com/saitama.mama"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/common/facebook-icon.svg"
+                        alt="facebook"
+                    /></a>
+                  </li>
+                  <li class="p-sns__item">
+                    <a
+                      href="https://twitter.com/saitamamm_media"
+                      target="_blank"
+                      ><img src="./assets/images/common/x-icon.svg" alt="X"
+                    /></a>
+                  </li>
+                  <li class="p-sns__item">
+                    <a
+                      href="https://www.instagram.com/saitama.mama/"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/common/instagram-icon.svg"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                </ul>
               </li>
-              <li class="p-footer__nav-item">
-                <a href="#">お知らせ・レポート</a>
+              <li class="p-footer__media-item">
+                <a
+                  href="https://zimohapi.com/"
+                  class="p-footer__media-logo"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/images/common/media-logo02.png"
+                    alt="ジモハピ上尾"
+                  />
+                </a>
+                <ul class="p-footer__sns p-sns">
+                  <li class="p-sns__item">
+                    <a href="https://www.facebook.com/zimohapi" target="_blank"
+                      ><img
+                        src="./assets/images/common/facebook-icon.svg"
+                        alt="facebook"
+                    /></a>
+                  </li>
+                  <li class="p-sns__item">
+                    <a href="https://twitter.com/zimohapi/" target="_blank"
+                      ><img src="./assets/images/common/x-icon.svg" alt="X"
+                    /></a>
+                  </li>
+                  <li class="p-sns__item">
+                    <a
+                      href="https://www.instagram.com/zimohapi.ageo/"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/common/instagram-icon.svg"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                </ul>
               </li>
-              <li class="p-footer__nav-item"><a href="#">スタッフ紹介</a></li>
-              <li class="p-footer__nav-item"><a href="#">会社情報</a></li>
-              <li class="p-footer__nav-item"><a href="#">お問い合わせ</a></li>
-              <li class="p-footer__nav-item">
-                <a href="#">プライバシーポリシー</a>
+              <li class="p-footer__media-item">
+                <a
+                  href="https://www.maming.jp/"
+                  class="p-footer__media-logo"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/images/common/media-logo03.png"
+                    alt="NPO法人マミング"
+                  />
+                </a>
+              </li>
+              <li class="p-footer__media-item">
+                <a href="#" class="p-footer__media-logo" target="_blank">
+                  <img
+                    src="./assets/images/common/media-logo04.png"
+                    alt="LOGO"
+                  />
+                </a>
               </li>
             </ul>
-          </nav>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="p-footer__block2">
-      <div class="l-inner">
-        <div class="p-footer__block2-wrapper">
-          <p class="p-footer__block2-title">運⽤メディア・運⽤事業</p>
-          <ul class="p-footer__media">
-            <li class="p-footer__media-item">
-              <a href="https://saitama-mama.com/" class="p-footer__media-logo" target="_blank">
-                <img src="./assets/images/common/media-logo01.png" alt="埼玉ママ情報" />
-              </a>
-              <ul class="p-footer__sns p-sns">
-                <li class="p-sns__item">
-                  <a href="https://www.facebook.com/saitama.mama" target="_blank"><img
-                      src="./assets/images/common/facebook-icon.svg" alt="facebook" /></a>
-                </li>
-                <li class="p-sns__item">
-                  <a href="https://twitter.com/saitamamm_media" target="_blank"><img
-                      src="./assets/images/common/x-icon.svg" alt="X" /></a>
-                </li>
-                <li class="p-sns__item">
-                  <a href="https://www.instagram.com/saitama.mama/" target="_blank"><img
-                      src="./assets/images/common/instagram-icon.svg" alt="instagram" /></a>
-                </li>
-              </ul>
-            </li>
-            <li class="p-footer__media-item">
-              <a href="https://zimohapi.com/" class="p-footer__media-logo" target="_blank">
-                <img src="./assets/images/common/media-logo02.png" alt="ジモハピ上尾" />
-              </a>
-              <ul class="p-footer__sns p-sns">
-                <li class="p-sns__item">
-                  <a href="https://www.facebook.com/zimohapi" target="_blank"><img
-                      src="./assets/images/common/facebook-icon.svg" alt="facebook" /></a>
-                </li>
-                <li class="p-sns__item">
-                  <a href="https://twitter.com/zimohapi/" target="_blank"><img src="./assets/images/common/x-icon.svg"
-                      alt="X" /></a>
-                </li>
-                <li class="p-sns__item">
-                  <a href="https://www.instagram.com/zimohapi.ageo/" target="_blank"><img
-                      src="./assets/images/common/instagram-icon.svg" alt="instagram" /></a>
-                </li>
-              </ul>
-            </li>
-            <li class="p-footer__media-item">
-              <a href="https://www.maming.jp/" class="p-footer__media-logo" target="_blank">
-                <img src="./assets/images/common/media-logo03.png" alt="NPO法人マミング" />
-              </a>
-            </li>
-            <li class="p-footer__media-item">
-              <a href="#" class="p-footer__media-logo" target="_blank">
-                <img src="./assets/images/common/media-logo04.png" alt="LOGO" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <small class="p-footer__copyright">Copyright © mamilus all right reserved.</small>
-  </footer>
-</body>
-
+      <small class="p-footer__copyright"
+        >Copyright © mamilus all right reserved.</small
+      >
+    </footer>
+  </body>
 </html>

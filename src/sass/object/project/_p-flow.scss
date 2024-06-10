@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.p-flow {
+    padding-top: rem(87);
+    padding-bottom: rem(88);
+}
+
+.p-flow__inner {
+}
+.p-flow__heading {
+    text-align: center;
+}
+
+.p-flow__items {
+    margin-top: rem(33);
+}
+
+.p-flow__item {
+    padding: rem(30);
+    border-radius: rem(20);
+}
+.p-flow__item:nth-child(2n + 1) {
+    background: $gray;
+    margin-bottom: rem(5);
+}
+
+.p-flow__img {
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 510 / 318;
+        border-radius: rem(20);
+    }
+}
+
+.p-flow__num {
+    position: absolute;
+    color: $white;
+    background: $pink;
+    font-family: $en-font-family;
+    font-size: rem(11);
+    letter-spacing: 0.1em;
+    line-height: 1;
+    top: rem(-10);
+    left: rem(-10);
+    border-radius: rem(23) rem(25) 0 rem(27);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: rem(14) rem(11) rem(10) rem(13);
+}
+.p-flow__num span {
+    font-size: rem(16);
+    margin-right: rem(3);
+}
+
+.p-flow__content {
+    margin-top: rem(27);
+}
+
+.p-flow__main {
+    font-family: $second-font-family;
+    font-weight: $semi-bold;
+    font-size: rem(22);
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.p-flow__main::before {
+    content: "";
+    flex-shrink: 0;
+    background: pink;
+    width: rem(7);
+    height: rem(7);
+    border-radius: rem(50);
+    margin-right: rem(14);
+    margin-top: rem(13);
+}
+
+.p-flow__text {
+    margin-top: rem(10);
+    font-size: rem(14);
+    line-height: calc(48 / 28);
+}
