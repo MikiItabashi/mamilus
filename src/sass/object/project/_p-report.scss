@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.p-report {
+    position: relative;
+    background-image: url(../images/service/report-sp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(62) 0;
+}
+.p-report::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/service/circle-text.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(84);
+    height: rem(88);
+    bottom: rem(-38);
+    left: rem(20);
+}
+
+.p-report__inner.l-inner {
+    max-width: rem(315);
+}
+
+.p-report__box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: rem(15);
+    filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.3));
+    padding: rem(25) 0 rem(30);
+}
+
+.p-report__text {
+    font-family: $second-font-family;
+    font-size: rem(20);
+    line-height: calc(60 / 40);
+    text-align: center;
+}
+
+.p-report__btn {
+    margin-top: rem(12);
+    text-align: center;
+}
