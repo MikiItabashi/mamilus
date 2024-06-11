@@ -66,7 +66,7 @@
   @include mq("md") {
     font-size: rem(40);
     margin-left: rem(40);
-    margin-right: rem(40); 
+    margin-right: rem(40);
   }
 }
 
@@ -142,7 +142,7 @@
   line-height: 2;
   text-align: justify;
   @include mq("md") {
-    font-size: rem(14);   
+    font-size: rem(14);
   }
 }
 
@@ -201,16 +201,15 @@
   object-fit: cover;
 }
 
-
 //左
 .p-top-service__sec:nth-of-type(odd) {
   margin-left: calc(50% - 50vw);
   padding-left: calc(50vw - 50%);
   margin-right: rem(-15);
   padding-right: rem(15);
-  border-radius: 0 rem(40)  rem(40) 0;
+  border-radius: 0 rem(40) rem(40) 0;
   @include mq("md") {
-    border-radius: 0 rem(80)  rem(80) 0;
+    border-radius: 0 rem(80) rem(80) 0;
     margin-right: 0;
     padding-right: rem(80);
   }
@@ -237,9 +236,9 @@
   padding-right: calc(50vw - 50%);
   margin-left: rem(-15);
   padding-left: rem(15);
-  border-radius:  rem(40) 0  0 rem(40);
+  border-radius: rem(40) 0 0 rem(40);
   @include mq("md") {
-    border-radius:  rem(80) 0  0 rem(80);
+    border-radius: rem(80) 0 0 rem(80);
     margin-left: 0;
     padding-left: rem(80);
   }
@@ -263,7 +262,7 @@
 
   .p-top-service__wrapper {
     @include mq("md") {
-      flex-direction: row-reverse;   
+      flex-direction: row-reverse;
     }
   }
 }
@@ -306,17 +305,18 @@
 }
 
 .p-top-service__img.--event03 {
-  margin-top: -27%;
-  width: 45%;
+  margin-top: -18%;
+  width: 51%;
 }
 
 .p-top-service__img.--support01 {
+  width: 90%;
 }
 
 .p-top-service__img.--support02 {
   width: 65%;
   margin-left: auto;
-  margin-top: -22%;
+  margin-top: -13%;
   box-shadow: 0 0 40px 0 rgba(185, 185, 182, 0.7);
 }
 
@@ -332,7 +332,6 @@
   display: inline-block;
   margin-top: 5.5em;
 }
-
 
 //背景
 .p-top-service__bg {

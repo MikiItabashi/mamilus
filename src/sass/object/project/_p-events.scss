@@ -47,6 +47,9 @@
 }
 
 .p-events__items {
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
     margin-top: rem(23);
     display: grid;
     gap: rem(25) 0;
