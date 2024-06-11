@@ -3,6 +3,8 @@
 .p-breadcrumb {
     padding: 0 rem(15);
     @include mq("md") {
+        max-width: 1650px;
+        margin: 0 auto;
         padding: 0 rem(40);
     }
 }
