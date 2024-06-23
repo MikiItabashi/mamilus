@@ -39,10 +39,10 @@
     width: 100%;
     height: rem(30);
     left: 0;
-    bottom: rem(-30);
+    bottom: 0;
+    transform: translateY(100%);
     @include mq("md") {
         height: rem(77);
-        bottom: rem(-77);
     }
 }
 

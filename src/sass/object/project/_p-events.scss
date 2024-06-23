@@ -37,10 +37,10 @@
 .p-events__title {
     text-align: center;
     font-family: $second-font-family;
+    font-weight: $semi-bold;
     font-size: rem(22);
     line-height: calc(68 / 44);
     letter-spacing: 0.05em;
-    font-weight: 400;
     @include mq("md") {
         font-size: rem(28);
     }

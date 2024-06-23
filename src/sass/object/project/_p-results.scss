@@ -125,6 +125,7 @@
     align-items: center;
     justify-content: flex-start;
     font-family: $second-font-family;
+    font-weight: $semi-bold;
     font-size: rem(14);
     line-height: calc(40 / 28);
     @include mq("md") {

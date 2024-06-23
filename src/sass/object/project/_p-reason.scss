@@ -37,6 +37,7 @@
 .p-reason__subTitle {
     color: $pink;
     font-family: $second-font-family;
+    font-weight: $semi-bold;
     font-size: rem(16);
     letter-spacing: 0.05em;
     text-align: center;
@@ -138,11 +139,11 @@
 
 .p-reason__main {
     font-family: $second-font-family;
+    font-weight: $semi-bold;
     font-size: rem(22);
     line-height: calc(68 / 44);
     letter-spacing: 0.05em;
     text-align: center;
-    font-weight: 400;
     white-space: nowrap;
     @include mq("md") {
         font-size: rem(24);
