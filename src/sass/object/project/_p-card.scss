@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.p-card__link {
+  display: block;
+}
+
 .p-card__label.c-new {
   position: absolute;
   top: rem(-10);
@@ -49,12 +53,12 @@
   font-weight: $bold;
   line-height: calc(48 / 28);
   display: -webkit-box;
-  -webkit-line-clamp: 3; 
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   transition: color 0.3s;
   @include mq("md") {
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 2;
     font-size: rem(16);
     line-height: calc(32 / 16);
     margin-top: rem(11);
@@ -72,7 +76,7 @@
 }
 
 @media (any-hover: hover) {
-  .p-card:hover .p-card__title {
+  .p-card__link:hover .p-card__title {
     color: $pink;
-  } 
+  }
 }

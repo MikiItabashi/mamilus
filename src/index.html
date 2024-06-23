@@ -1,527 +1,776 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex" />
+    <!-- meta情報 -->
+    <title>Mamilus</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- ファビコン -->
+    <link rel="”icon”" href="" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="robots" content="noindex" />
-  <!-- meta情報 -->
-  <title>Mamilus</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <!-- ファビコン -->
-  <link rel="”icon”" href="" />
-  <!-- google font  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./assets/js/script.js"></script>
-  <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-</head>
-
-<body>
-  <header id="js-header" class="p-header">
-    <div class="p-header__inner l-inner">
-      <div class="p-header__left">
-        <h1 class="p-header__logo">
-          <a href="#">
-            <img src="./assets/images/common/logo.svg" alt="Mamilus">
-          </a>
-        </h1>
-        <p class="p-header__desc">埼⽟を中⼼とした企業・⾏政の<br class="u-mobile">イベント企画・プロモーション<br>株式会社マミラス</p>
-      </div>
-      <div class="p-header__right">
-        <nav class="p-header__nav">
-          <ul class="p-header__nav-list">
-            <li class="p-header__nav-item"><a href="#">トップ</a></li>
-            <li class="p-header__nav-item"><a href="#">事業紹介</a></li>
-            <li class="p-header__nav-item"><a href="#">SDGsの取り組み</a></li>
-            <li class="p-header__nav-item"><a href="#">お知らせ・レポート</a></li>
-            <li class="p-header__nav-item"><a href="#">スタッフ紹介</a></li>
-            <li class="p-header__nav-item"><a href="#">会社情報</a></li>
-          </ul>
-        </nav>
-        <div class="p-header__btn">
-          <a href="#" class="c-contact-btn">お問い合わせ</a>
-        </div>
-      </div>
-      <button type="button" id="js-hamburger" class="p-header__hamburger" aria-controls="js-drawer" aria-expanded="false">
-        <span class="p-header__hamburger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <span id="js-hamburger-text" class="p-header__hamburger-text">MENU</span>
-      </button>
-      <div id="js-drawer" class="p-drawer" aria-hidden="true">
-        <nav class="p-drawer__nav">
-          <ul class="p-drawer__nav-list">
-            <li class="p-drawer__nav-item"><a href="#">トップ</a></li>
-            <li class="p-drawer__nav-item"><a href="#">事業紹介</a></li>
-            <li class="p-drawer__nav-item"><a href="#">SDGsの取り組み</a></li>
-            <li class="p-drawer__nav-item"><a href="#">お知らせ・レポート</a></li>
-            <li class="p-drawer__nav-item"><a href="#">スタッフ紹介</a></li>
-            <li class="p-drawer__nav-item"><a href="#">会社情報</a></li>
-          </ul>
-        </nav>
-        <div class="p-drawer__btn">
-          <a href="#" class="c-contact-btn">お問い合わせ</a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main class="l-main">
-    <div class="p-top-mv">
-      <div class="p-top-mv__bg">
-        <div class="swiper p-top-mv__swiper js-mvSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <picture>
-                <source media="(min-width: 768px)" srcset="./assets/images/top/mv01_pc.jpg">
-                <img src="./assets/images/top/mv01_sp.jpg" alt="キッズチアダンス発表会の写真">
-              </picture>
-            </div>
-            <div class="swiper-slide">
-              <picture>
-                <source media="(min-width: 768px)" srcset="./assets/images/top/mv02_pc.jpg">
-                <img src="./assets/images/top/mv02_sp.jpg" alt="くつえらび勉強会の集合写真">
-              </picture>
-            </div>
-            <div class="swiper-slide">
-              <picture>
-                <source media="(min-width: 768px)" srcset="./assets/images/top/mv03_pc.jpg">
-                <img src="./assets/images/top/mv03_sp.jpg" alt="赤ちゃんと女性が遊んでいる写真">
-              </picture>
-            </div>
-            <div class="swiper-slide">
-              <picture>
-                <source media="(min-width: 768px)" srcset="./assets/images/top/mv04_pc.jpg">
-                <img src="./assets/images/top/mv04_sp.jpg" alt="赤ちゃん撮影会の写真">
-              </picture>
-            </div>
-          </div>
-        </div>
-        <span class="p-top-mv__mission">OUR&nbsp;<br class="u-mobile">MISSION</span>
-      </div>
-      <div class="p-top-mv__body">
-        <div class="l-inner">
-          <p class="p-top-mv__lead">
-            <span>企業</span>×<span>⾏政</span>×<span>地域</span>の<br class="u-mobile">協働を通して<br>
-            ⾃分らしく輝く⼥性を増やし、<br>
-            地域に賑わいを創出すること
+  <body>
+    <header id="js-header" class="p-header">
+      <div class="p-header__inner l-inner">
+        <div class="p-header__left">
+          <h1 class="p-header__logo">
+            <a href="#">
+              <img src="./assets/images/common/logo.svg" alt="Mamilus" />
+            </a>
+          </h1>
+          <p class="p-header__desc">
+            埼⽟を中⼼とした企業・⾏政の<br
+              class="u-mobile"
+            />イベント企画・プロモーション<br />株式会社マミラス
           </p>
-          <div class="p-top-mv__btn">
-            <a href="#" class="c-arrow-btn">イベントの企画・運営を依頼する</a>
-          </div>
         </div>
-      </div>
-      <div class="p-top-mv__shape">
-        <img src="./assets/images/shape/shape01.svg" alt="">
-      </div>
-    </div>
-    <div class="p-top-pickup">
-      <span class="p-top-pickup__label c-pickup">PICK<br>UP</span>
-      <a href="#" class="p-top-pickup__link">
-        <time datetime="2024-04-24" class="p-top-pickup__date">2024年4月24日</time>
-        <p class="p-top-pickup__title">イオンモール上尾様にてハワイアンフェスステージを担当させていただきました</p>
-      </a>
-    </div>
-    <section class="p-top-service">
-      <div class="p-top-service__inner l-inner">
-        <div class="p-top-service__heading c-heading">
-          <p class="c-heading__en">SERVICE</p>
-          <h2 class="c-heading__ja">事業紹介</h2>
-        </div>
-        <section class="p-top-service__sec">
-          <div class="p-top-service__bg --left">
-            <img class="shape-top" src="./assets/images/shape/shape02.svg" alt="">
-            <img class="shape-bottom" src="./assets/images/shape/shape03.svg" alt="">
-            <span class="deco-text">EVENT</span>
-          </div>
-          <div class="p-top-service__wrapper">
-            <div class="p-top-service__above">
-              <div class="p-top-service__images --event">
-                <div class="p-top-service__img --event01">
-                  <img src="./assets/images/top/service-event01.jpg" alt="ワークショップの様子の写真">
-                </div>
-                <div class="p-top-service__img --event02">
-                  <img src="./assets/images/top/service-event02.jpg" alt="赤ちゃん撮影会の写真">
-                </div>
-                <div class="p-top-service__img --event03">
-                  <img src="./assets/images/top/service-event03.jpg" alt="ダンス発表会の写真">
-                </div>
-                <img class="shape" src="./assets/images/shape/shape11.svg" alt="">
-              </div>
-              <h3 class="p-top-service__sec-title">イベント企画</h3>
-            </div>
-            <div class="p-top-service__body">
-              <p class="p-top-service__lead">
-                企画⽴案から<br>
-                広報・準備実⾏まで<br class="u-mobile">ワンストップ
-              </p>
-              <p class="p-top-service__text">
-                イベントの企画・開催を通し商品や店舗のプロモーションを成功に導きます。株式会社マミラスの強みは、埼⽟の地域に根付いた30,000名以上のコミュニティーを有していること。イベント集客においては、コミュニティを活⽤し集客を成功に導きます。講師・出店のアサインから、イベントの企画・実⾏、メディア掲載までワンストップでお任せいただけます。
-              </p>
-              <div class="p-top-service__box">
-                <p class="p-top-service__box-title">主な開催企業実績</p>
-                <p class="p-top-service__box-text">イオンモール／アリオ／モラージュ菖蒲／ベニバナウォーク／まるひろ百貨店／総合住宅展⽰場ハウジングステージ／アイ⼯務店／ポラスの分譲住宅／アイダ設計／ミサワホーム／セコムホームライフ／メットライフ⽣命／ジブラルタ⽣命／プルデンシャル⽣命保険他 （敬称略・順不同）</p>
-              </div>
-              <div class="p-top-service__btn --wide">
-                <a href="#" class="c-arrow-btn">イベント企画を詳しくを⾒る</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="p-top-service__sec">
-          <div class="p-top-service__bg --right">
-            <img class="shape-top" src="./assets/images/shape/shape04.svg" alt="">
-            <img class="shape-bottom u-mobile" src="./assets/images/shape/shape05.svg" alt="">
-            <img class="shape-bottom u-desktop" src="./assets/images/shape/shape06.svg" alt="">
-            <span class="deco-text">SUPPORT</span>
-          </div>
-          <div class="p-top-service__wrapper">
-            <div class="p-top-service__above">
-              <div class="p-top-service__images --support">
-                <div class="p-top-service__img --support01">
-                  <img src="./assets/images/top/service-support01.jpg" alt="くつえらび勉強会の集合写真">
-                </div>
-                <div class="p-top-service__img --support02">
-                  <img src="./assets/images/top/service-support02.jpg" alt="笑顔の女性と男の子の写真">
-                </div>
-                <img class="shape" src="./assets/images/shape/shape12.svg" alt="">
-              </div>
-              <h3 class="p-top-service__sec-title --support">プロモーション<br><span>サポート</span></h3>
-            </div>
-            <div class="p-top-service__body">
-              <p class="p-top-service__lead">
-                認知・魅⼒アップ、<br>
-                ファンづくり事業
-              </p>
-              <p class="p-top-service__text">
-                原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
-              </p>
-              <div class="p-top-service__btn">
-                <a href="#" class="c-arrow-btn">事業内容を詳しく⾒る</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="p-top-service__sec">
-          <div class="p-top-service__bg --left">
-            <img class="shape-top" src="./assets/images/shape/shape02.svg" alt="">
-            <img class="shape-bottom" src="./assets/images/shape/shape03.svg" alt="">
-            <span class="deco-text">MEDIA</span>
-          </div>
-          <div class="p-top-service__wrapper">
-            <div class="p-top-service__above">
-              <div class="p-top-service__images --media">
-                <div class="p-top-service__img --media01">
-                  <img src="./assets/images/top/service-media01.jpg" alt="赤ちゃんと女性が遊んでいる写真">
-                </div>
-                <ul class="p-top-service__media">
-                  <li class="p-top-service__media-item">
-                    <a href="https://zimohapi.com/" target="_blank">
-                      <img src="./assets/images/common/media-logo02.png" alt="ジモハピ上尾">
-                    </a>
-                  </li>
-                  <li class="p-top-service__media-item">
-                    <a href="https://saitama-mama.com/" target="_blank">
-                      <img src="./assets/images/common/media-logo01.png" alt="埼玉ママ情報">
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="p-top-service__sec-title">メディア・広告</h3>
-            </div>
-            <div class="p-top-service__body">
-              <p class="p-top-service__lead">
-                地域に根付いた<br>
-                メディア運営・広告事業
-              </p>
-              <p class="p-top-service__text">
-                原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
-              </p>
-              <div class="p-top-service__btn">
-                <a href="#" class="c-arrow-btn">事業内容を詳しく⾒る</a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-    <section class="p-top-staff">
-      <div class="p-top-staff__shape"><img src="./assets/images/shape/shape07.svg" alt=""></div>
-      <div class="p-top-staff__inner l-inner">
-        <div class="p-top-staff__head">
-          <div class="p-top-staff__heading c-heading">
-            <p class="c-heading__en">STAFF<small>&nbsp;&&nbsp;</small>PARTNER</p>
-            <h2 class="c-heading__ja">運営スタッフ&パートナー紹介</h2>
-          </div>
-          <div class="p-top-staff__btn u-desktop">
-            <a href="#" class="c-arrow-btn --white">スタッフ紹介を詳しく⾒る</a>
-          </div>
-        </div>
-        <ul class="p-top-staff__list">
-          <li class="p-top-staff__item">
-            <div class="p-top-staff__img">
-              <img src="./assets/images/top/staff01.jpg" alt="運営スタッフ、パートナーの写真1">
-            </div>
-          </li>
-          <li class="p-top-staff__item">
-            <div class="p-top-staff__img">
-              <img src="./assets/images/top/staff02.jpg" alt="運営スタッフ、パートナーの写真2">
-            </div>
-          </li>
-          <li class="p-top-staff__item">
-            <div class="p-top-staff__img">
-              <img src="./assets/images/top/staff03.jpg" alt="運営スタッフ、パートナーの写真3">
-            </div>
-          </li>
-          <li class="p-top-staff__item">
-            <div class="p-top-staff__img">
-              <img src="./assets/images/top/staff04.jpg" alt="運営スタッフ、パートナーの写真4">
-            </div>
-          </li>
-        </ul>
-        <div class="p-top-staff__body">
-          <p class="p-top-staff__lead">
-            イベント・プロモーションは<br>
-            ワンストップで、<br>
-            わたしたちにお任せください。
-          </p>
-          <p class="p-top-staff__text">説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。</p>
-          <div class="p-top-staff__btn u-mobile">
-            <a href="#" class="c-arrow-btn --white">スタッフ紹介を詳しく⾒る</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-top-blog">
-      <div class="p-top-blog__shape">
-        <picture>
-          <source media="(min-width: 768px)" srcset="./assets/images/shape/shape09.svg">
-          <img src="./assets/images/shape/shape08.svg" alt="">
-        </picture>
-      </div>
-      <div class="l-inner">
-        <div class="p-top-blog__head">
-          <div class="p-top-blog__heading c-heading">
-            <p class="c-heading__en">BLOG</p>
-            <h2 class="c-heading__ja">ブログ・レポート</h2>
-          </div>
-          <div class="p-top-blog__btn u-desktop">
-            <a href="#" class="c-arrow-btn --white">ブログ・レポートをもっと⾒る</a>
-          </div>
-        </div>
-        <div class="swiper p-top-blog__swiper js-blogSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="#" class="p-card">
-                <span class="p-card__label c-new">NEW</span>
-                <div class="p-card__img">
-                  <img src="./assets/images/dummy/blog-dummy01.jpg" alt="">
-                </div>
-                <time datetime="2024-04-24" class="p-card__date">2024年4月24日</time>
-                <h3 class="p-card__title">イオンモール上尾様にてハワイアンフェスステージを担当させていただきました</h3>
-                <div class="p-card__category">
-                  <span class="c-category">イベント</span>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="p-card">
-                <span class="p-card__label c-new">NEW</span>
-                <div class="p-card__img">
-                  <img src="./assets/images/dummy/blog-dummy02.jpg" alt="">
-                </div>
-                <span class="p-card__date">2024年4月24日</span>
-                <h3 class="p-card__title">長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト</h3>
-                <div class="p-card__category">
-                  <span class="c-category">イベント</span>
-                  <span class="c-category">イベント</span>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="p-card">
-                <div class="p-card__img">
-                  <img src="./assets/images/dummy/blog-dummy01.jpg" alt="">
-                </div>
-                <time datetime="2024-04-24" class="p-card__date">2024年4月24日</time>
-                <h3 class="p-card__title">イオンモール上尾様にてハワイアンフェスステージを担当させていただきました</h3>
-                <div class="p-card__category">
-                  <span class="c-category">イベント</span>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="p-card">
-                <div class="p-card__img">
-                  <img src="./assets/images/dummy/blog-dummy02.jpg" alt="">
-                </div>
-                <span class="p-card__date">2024年4月24日</span>
-                <h3 class="p-card__title">長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト</h3>
-                <div class="p-card__category">
-                  <span class="c-category">イベント</span>
-                  <span class="c-category">イベント</span>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="p-card">
-                <div class="p-card__img">
-                  <img src="./assets/images/dummy/blog-dummy01.jpg" alt="">
-                </div>
-                <time datetime="2024-04-24" class="p-card__date">2024年4月24日</time>
-                <h3 class="p-card__title">イオンモール上尾様にてハワイアンフェスステージを担当させていただきました</h3>
-                <div class="p-card__category">
-                  <span class="c-category">イベント</span>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" class="p-card">
-                <div class="p-card__img">
-                  <img src="./assets/images/dummy/blog-dummy02.jpg" alt="">
-                </div>
-                <span class="p-card__date">2024年4月24日</span>
-                <h3 class="p-card__title">長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト</h3>
-                <div class="p-card__category">
-                  <span class="c-category">イベント</span>
-                  <span class="c-category">イベント</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-        <div class="p-top-blog__btn u-mobile">
-          <a href="#" class="c-arrow-btn --white">ブログ・レポートをもっと⾒る</a>
-        </div>
-      </div>
-    </section>
-    <section class="p-top-sdgs">
-      <div class="l-inner">
-        <div class="p-top-sdgs__img">
-          <picture>
-            <source media="(min-width: 768px)" srcset="./assets/images/top/sdgs-img_pc.jpg">
-            <img src="./assets/images/top/sdgs-img_sp.jpg" alt="マミラスメンバーの集合写真">
-          </picture>
-        </div>
-        <div class="p-top-sdgs__body">
-          <h2 class="p-top-sdgs__heading">マミラス<br>SDGsの取り組み</h2>
-          <p class="p-top-sdgs__text">
-            原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
-          </p>
-          <div class="p-top-sdgs__btn">
-            <a href="#" class="c-arrow-btn">SDGsの取り組みを⾒る</a>
-          </div>
-        </div>
-      </div>
-      <div class="p-top-sdgs__shape"><img src="./assets/images/shape/shape10.svg" alt=""></div>
-    </section>
-    <section class="p-cta">
-      <div class="l-inner">
-        <div class="p-cta__heading c-heading --white">
-          <p class="c-heading__en">CONTACT</p>
-          <h2 class="c-heading__ja">お問い合わせ</h2>
-        </div>
-        <p class="p-cta__text">
-          イベント企画・運営・プロモーションなど、<br>
-          お気軽にお問い合わせください。
-        </p>
-        <div class="p-cta__btn">
-          <a href="#" class="c-arrow-btn --white">ご相談・お⾒積り・お問い合わせ</a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="p-footer">
-    <div class="p-footer__block1">
-      <div class="l-inner">
-        <div class="p-fooer__above-wrapper">
-          <div class="p-footer__info">
-            <div class="p-footer__logo">
-              <a href="#">
-                <img src="./assets/images/common/logo.svg" alt="Mamilus">
-              </a>
-            </div>
-            <div class="p-footer__company">
-              <p class="p-footer__company-name">株式会社マミラス</p>
-              <p class="p-footer__company-address"><span>〒332-0012&nbsp;</span><span>埼玉県川口市本町4丁目3-14 小峰第一ビル4F-J5</span></p>
-            </div>
-          </div>
-          <nav class="p-footer__nav">
-            <ul class="p-footer__nav-list">
-              <li class="p-footer__nav-item"><a href="#">トップ</a></li>
-              <li class="p-footer__nav-item"><a href="#">事業紹介</a></li>
-              <li class="p-footer__nav-item"><a href="#">SDGsの取り組み</a></li>
-              <li class="p-footer__nav-item"><a href="#">お知らせ・レポート</a></li>
-              <li class="p-footer__nav-item"><a href="#">スタッフ紹介</a></li>
-              <li class="p-footer__nav-item"><a href="#">会社情報</a></li>
-              <li class="p-footer__nav-item"><a href="#">お問い合わせ</a></li>
-              <li class="p-footer__nav-item"><a href="#">プライバシーポリシー</a></li>
+        <div class="p-header__right">
+          <nav class="p-header__nav">
+            <ul class="p-header__nav-list">
+              <li class="p-header__nav-item"><a href="#">トップ</a></li>
+              <li class="p-header__nav-item"><a href="#">事業紹介</a></li>
+              <li class="p-header__nav-item"><a href="#">SDGsの取り組み</a></li>
+              <li class="p-header__nav-item">
+                <a href="#">お知らせ・レポート</a>
+              </li>
+              <li class="p-header__nav-item"><a href="#">スタッフ紹介</a></li>
+              <li class="p-header__nav-item"><a href="#">会社情報</a></li>
             </ul>
           </nav>
+          <div class="p-header__btn">
+            <a href="#" class="c-contact-btn">お問い合わせ</a>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="js-hamburger"
+          class="p-header__hamburger"
+          aria-controls="js-drawer"
+          aria-expanded="false"
+        >
+          <span class="p-header__hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span id="js-hamburger-text" class="p-header__hamburger-text"
+            >MENU</span
+          >
+        </button>
+        <div id="js-drawer" class="p-drawer" aria-hidden="true">
+          <nav class="p-drawer__nav">
+            <ul class="p-drawer__nav-list">
+              <li class="p-drawer__nav-item"><a href="#">トップ</a></li>
+              <li class="p-drawer__nav-item"><a href="#">事業紹介</a></li>
+              <li class="p-drawer__nav-item"><a href="#">SDGsの取り組み</a></li>
+              <li class="p-drawer__nav-item">
+                <a href="#">お知らせ・レポート</a>
+              </li>
+              <li class="p-drawer__nav-item"><a href="#">スタッフ紹介</a></li>
+              <li class="p-drawer__nav-item"><a href="#">会社情報</a></li>
+            </ul>
+          </nav>
+          <div class="p-drawer__btn">
+            <a href="#" class="c-contact-btn">お問い合わせ</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="p-footer__block2">
-      <div class="l-inner">
-        <div class="p-footer__block2-wrapper">
-          <p class="p-footer__block2-title">運⽤メディア・運⽤事業</p>
-          <ul class="p-footer__media">
-            <li class="p-footer__media-item">
-              <a href="https://saitama-mama.com/" class="p-footer__media-logo" target="_blank">
-                <img src="./assets/images/common/media-logo01.png" alt="埼玉ママ情報">
-              </a>
-              <ul class="p-footer__sns p-sns">
-                <li class="p-sns__item"><a href="https://www.facebook.com/saitama.mama" target="_blank"><img src="./assets/images/common/facebook-icon.svg" alt="facebook"></a></li>
-                <li class="p-sns__item"><a href="https://twitter.com/saitamamm_media" target="_blank"><img src="./assets/images/common/x-icon.svg" alt="X"></a></li>
-                <li class="p-sns__item"><a href="https://www.instagram.com/saitama.mama/" target="_blank"><img src="./assets/images/common/instagram-icon.svg" alt="instagram"></a></li>
-              </ul>
+    </header>
+    <main class="l-main">
+      <div class="p-top-mv">
+        <div class="p-top-mv__bg">
+          <div class="swiper p-top-mv__swiper js-mvSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/top/mv01_pc.jpg"
+                  />
+                  <img
+                    src="./assets/images/top/mv01_sp.jpg"
+                    alt="キッズチアダンス発表会の写真"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/top/mv02_pc.jpg"
+                  />
+                  <img
+                    src="./assets/images/top/mv02_sp.jpg"
+                    alt="くつえらび勉強会の集合写真"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/top/mv03_pc.jpg"
+                  />
+                  <img
+                    src="./assets/images/top/mv03_sp.jpg"
+                    alt="赤ちゃんと女性が遊んでいる写真"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/top/mv04_pc.jpg"
+                  />
+                  <img
+                    src="./assets/images/top/mv04_sp.jpg"
+                    alt="赤ちゃん撮影会の写真"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <span class="p-top-mv__mission"
+            >OUR&nbsp;<br class="u-mobile" />MISSION</span
+          >
+        </div>
+        <div class="p-top-mv__body">
+          <div class="l-inner">
+            <p class="p-top-mv__lead">
+              <span>企業</span>×<span>⾏政</span>×<span>地域</span>の<br
+                class="u-mobile"
+              />協働を通して<br />
+              ⾃分らしく輝く⼥性を増やし、<br />
+              地域に賑わいを創出すること
+            </p>
+            <div class="p-top-mv__btn">
+              <a href="#" class="c-arrow-btn">イベントの企画・運営を依頼する</a>
+            </div>
+          </div>
+        </div>
+        <div class="p-top-mv__shape">
+          <img src="./assets/images/shape/shape01.svg" alt="" />
+        </div>
+      </div>
+      <div class="p-top-pickup">
+        <span class="p-top-pickup__label c-pickup">PICK<br />UP</span>
+        <a href="#" class="p-top-pickup__link">
+          <time datetime="2024-04-24" class="p-top-pickup__date"
+            >2024年4月24日</time
+          >
+          <p class="p-top-pickup__title">
+            イオンモール上尾様にてハワイアンフェスステージを担当させていただきました
+          </p>
+        </a>
+      </div>
+      <section class="p-top-service">
+        <div class="p-top-service__inner l-inner">
+          <div class="p-top-service__heading c-heading">
+            <p class="c-heading__en">SERVICE</p>
+            <h2 class="c-heading__ja">事業紹介</h2>
+          </div>
+          <section class="p-top-service__sec">
+            <div class="p-top-service__bg --left">
+              <img
+                class="shape-top"
+                src="./assets/images/shape/shape02.svg"
+                alt=""
+              />
+              <img
+                class="shape-bottom"
+                src="./assets/images/shape/shape03.svg"
+                alt=""
+              />
+              <span class="deco-text">EVENT</span>
+            </div>
+            <div class="p-top-service__wrapper">
+              <div class="p-top-service__above">
+                <div class="p-top-service__images --event">
+                  <div class="p-top-service__img --event01">
+                    <img
+                      src="./assets/images/top/service-event01.jpg"
+                      alt="ワークショップの様子の写真"
+                    />
+                  </div>
+                  <div class="p-top-service__img --event02">
+                    <img
+                      src="./assets/images/top/service-event02.jpg"
+                      alt="赤ちゃん撮影会の写真"
+                    />
+                  </div>
+                  <div class="p-top-service__img --event03">
+                    <img
+                      src="./assets/images/top/service-event03.jpg"
+                      alt="ダンス発表会の写真"
+                    />
+                  </div>
+                  <img
+                    class="shape"
+                    src="./assets/images/shape/shape11.svg"
+                    alt=""
+                  />
+                </div>
+                <h3 class="p-top-service__sec-title">イベント企画</h3>
+              </div>
+              <div class="p-top-service__body">
+                <p class="p-top-service__lead">
+                  企画⽴案から<br />
+                  広報・準備実⾏まで<br class="u-mobile" />ワンストップ
+                </p>
+                <p class="p-top-service__text">
+                  イベントの企画・開催を通し商品や店舗のプロモーションを成功に導きます。株式会社マミラスの強みは、埼⽟の地域に根付いた30,000名以上のコミュニティーを有していること。イベント集客においては、コミュニティを活⽤し集客を成功に導きます。講師・出店のアサインから、イベントの企画・実⾏、メディア掲載までワンストップでお任せいただけます。
+                </p>
+                <div class="p-top-service__box">
+                  <p class="p-top-service__box-title">主な開催企業実績</p>
+                  <p class="p-top-service__box-text">
+                    イオンモール／アリオ／モラージュ菖蒲／ベニバナウォーク／まるひろ百貨店／総合住宅展⽰場ハウジングステージ／アイ⼯務店／ポラスの分譲住宅／アイダ設計／ミサワホーム／セコムホームライフ／メットライフ⽣命／ジブラルタ⽣命／プルデンシャル⽣命保険他
+                    （敬称略・順不同）
+                  </p>
+                </div>
+                <div class="p-top-service__btn --wide">
+                  <a href="#" class="c-arrow-btn">イベント企画を詳しくを⾒る</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="p-top-service__sec">
+            <div class="p-top-service__bg --right">
+              <img
+                class="shape-top"
+                src="./assets/images/shape/shape04.svg"
+                alt=""
+              />
+              <img
+                class="shape-bottom u-mobile"
+                src="./assets/images/shape/shape05.svg"
+                alt=""
+              />
+              <img
+                class="shape-bottom u-desktop"
+                src="./assets/images/shape/shape06.svg"
+                alt=""
+              />
+              <span class="deco-text">SUPPORT</span>
+            </div>
+            <div class="p-top-service__wrapper">
+              <div class="p-top-service__above">
+                <div class="p-top-service__images --support">
+                  <div class="p-top-service__img --support01">
+                    <img
+                      src="./assets/images/top/service-support01.jpg"
+                      alt="くつえらび勉強会の集合写真"
+                    />
+                  </div>
+                  <div class="p-top-service__img --support02">
+                    <img
+                      src="./assets/images/top/service-support02.jpg"
+                      alt="笑顔の女性と男の子の写真"
+                    />
+                  </div>
+                  <img
+                    class="shape"
+                    src="./assets/images/shape/shape12.svg"
+                    alt=""
+                  />
+                </div>
+                <h3 class="p-top-service__sec-title --support">
+                  プロモーション<br /><span>サポート</span>
+                </h3>
+              </div>
+              <div class="p-top-service__body">
+                <p class="p-top-service__lead">
+                  認知・魅⼒アップ、<br />
+                  ファンづくり事業
+                </p>
+                <p class="p-top-service__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+                <div class="p-top-service__btn">
+                  <a href="#" class="c-arrow-btn">事業内容を詳しく⾒る</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="p-top-service__sec">
+            <div class="p-top-service__bg --left">
+              <img
+                class="shape-top"
+                src="./assets/images/shape/shape02.svg"
+                alt=""
+              />
+              <img
+                class="shape-bottom"
+                src="./assets/images/shape/shape03.svg"
+                alt=""
+              />
+              <span class="deco-text">MEDIA</span>
+            </div>
+            <div class="p-top-service__wrapper">
+              <div class="p-top-service__above">
+                <div class="p-top-service__images --media">
+                  <div class="p-top-service__img --media01">
+                    <img
+                      src="./assets/images/top/service-media01.jpg"
+                      alt="赤ちゃんと女性が遊んでいる写真"
+                    />
+                  </div>
+                  <ul class="p-top-service__media">
+                    <li class="p-top-service__media-item">
+                      <a href="https://zimohapi.com/" target="_blank">
+                        <img
+                          src="./assets/images/common/media-logo02.png"
+                          alt="ジモハピ上尾"
+                        />
+                      </a>
+                    </li>
+                    <li class="p-top-service__media-item">
+                      <a href="https://saitama-mama.com/" target="_blank">
+                        <img
+                          src="./assets/images/common/media-logo01.png"
+                          alt="埼玉ママ情報"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <h3 class="p-top-service__sec-title">メディア・広告</h3>
+              </div>
+              <div class="p-top-service__body">
+                <p class="p-top-service__lead">
+                  地域に根付いた<br />
+                  メディア運営・広告事業
+                </p>
+                <p class="p-top-service__text">
+                  原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+                </p>
+                <div class="p-top-service__btn">
+                  <a href="#" class="c-arrow-btn">事業内容を詳しく⾒る</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="p-top-staff">
+        <div class="p-top-staff__shape">
+          <img src="./assets/images/shape/shape07.svg" alt="" />
+        </div>
+        <div class="p-top-staff__inner l-inner">
+          <div class="p-top-staff__head">
+            <div class="p-top-staff__heading c-heading">
+              <p class="c-heading__en">
+                STAFF<small>&nbsp;&&nbsp;</small>PARTNER
+              </p>
+              <h2 class="c-heading__ja">運営スタッフ&パートナー紹介</h2>
+            </div>
+            <div class="p-top-staff__btn u-desktop">
+              <a href="#" class="c-arrow-btn --white"
+                >スタッフ紹介を詳しく⾒る</a
+              >
+            </div>
+          </div>
+          <ul class="p-top-staff__list">
+            <li class="p-top-staff__item">
+              <div class="p-top-staff__img">
+                <img
+                  src="./assets/images/top/staff01.jpg"
+                  alt="運営スタッフ、パートナーの写真1"
+                />
+              </div>
             </li>
-            <li class="p-footer__media-item">
-              <a href="https://zimohapi.com/" class="p-footer__media-logo" target="_blank">
-                <img src="./assets/images/common/media-logo02.png" alt="ジモハピ上尾">
-              </a>
-              <ul class="p-footer__sns p-sns">
-                <li class="p-sns__item"><a href="https://www.facebook.com/zimohapi" target="_blank"><img src="./assets/images/common/facebook-icon.svg" alt="facebook"></a></li>
-                <li class="p-sns__item"><a href="https://twitter.com/zimohapi/" target="_blank"><img src="./assets/images/common/x-icon.svg" alt="X"></a></li>
-                <li class="p-sns__item"><a href="https://www.instagram.com/zimohapi.ageo/" target="_blank"><img src="./assets/images/common/instagram-icon.svg" alt="instagram"></a></li>
-              </ul>
+            <li class="p-top-staff__item">
+              <div class="p-top-staff__img">
+                <img
+                  src="./assets/images/top/staff02.jpg"
+                  alt="運営スタッフ、パートナーの写真2"
+                />
+              </div>
             </li>
-            <li class="p-footer__media-item">
-              <a href="https://www.maming.jp/" class="p-footer__media-logo" target="_blank">
-                <img src="./assets/images/common/media-logo03.png" alt="NPO法人マミング">
-              </a>
+            <li class="p-top-staff__item">
+              <div class="p-top-staff__img">
+                <img
+                  src="./assets/images/top/staff03.jpg"
+                  alt="運営スタッフ、パートナーの写真3"
+                />
+              </div>
             </li>
-            <li class="p-footer__media-item">
-              <a href="#" class="p-footer__media-logo" target="_blank">
-                <img src="./assets/images/common/media-logo04.png" alt="LOGO">
-              </a>
+            <li class="p-top-staff__item">
+              <div class="p-top-staff__img">
+                <img
+                  src="./assets/images/top/staff04.jpg"
+                  alt="運営スタッフ、パートナーの写真4"
+                />
+              </div>
             </li>
           </ul>
+          <div class="p-top-staff__body">
+            <p class="p-top-staff__lead">
+              イベント・プロモーションは<br />
+              ワンストップで、<br />
+              わたしたちにお任せください。
+            </p>
+            <p class="p-top-staff__text">
+              説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。説明が少し⼊ります。
+            </p>
+            <div class="p-top-staff__btn u-mobile">
+              <a href="#" class="c-arrow-btn --white"
+                >スタッフ紹介を詳しく⾒る</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="p-top-blog">
+        <div class="p-top-blog__shape">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/shape/shape09.svg"
+            />
+            <img src="./assets/images/shape/shape08.svg" alt="" />
+          </picture>
+        </div>
+        <div class="l-inner">
+          <div class="p-top-blog__head">
+            <div class="p-top-blog__heading c-heading">
+              <p class="c-heading__en">BLOG</p>
+              <h2 class="c-heading__ja">ブログ・レポート</h2>
+            </div>
+            <div class="p-top-blog__btn u-desktop">
+              <a href="#" class="c-arrow-btn --white"
+                >ブログ・レポートをもっと⾒る</a
+              >
+            </div>
+          </div>
+          <div class="swiper p-top-blog__swiper js-blogSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="p-card">
+                  <span class="p-card__label c-new">NEW</span>
+                  <div class="p-card__img">
+                    <img src="./assets/images/dummy/blog-dummy01.jpg" alt="" />
+                  </div>
+                  <time datetime="2024-04-24" class="p-card__date"
+                    >2024年4月24日</time
+                  >
+                  <h3 class="p-card__title">
+                    イオンモール上尾様にてハワイアンフェスステージを担当させていただきました
+                  </h3>
+                  <div class="p-card__category">
+                    <span class="c-category">イベント</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="p-card">
+                  <span class="p-card__label c-new">NEW</span>
+                  <div class="p-card__img">
+                    <img src="./assets/images/dummy/blog-dummy02.jpg" alt="" />
+                  </div>
+                  <span class="p-card__date">2024年4月24日</span>
+                  <h3 class="p-card__title">
+                    長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト
+                  </h3>
+                  <div class="p-card__category">
+                    <span class="c-category">イベント</span>
+                    <span class="c-category">イベント</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="p-card">
+                  <div class="p-card__img">
+                    <img src="./assets/images/dummy/blog-dummy01.jpg" alt="" />
+                  </div>
+                  <time datetime="2024-04-24" class="p-card__date"
+                    >2024年4月24日</time
+                  >
+                  <h3 class="p-card__title">
+                    イオンモール上尾様にてハワイアンフェスステージを担当させていただきました
+                  </h3>
+                  <div class="p-card__category">
+                    <span class="c-category">イベント</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="p-card">
+                  <div class="p-card__img">
+                    <img src="./assets/images/dummy/blog-dummy02.jpg" alt="" />
+                  </div>
+                  <span class="p-card__date">2024年4月24日</span>
+                  <h3 class="p-card__title">
+                    長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト
+                  </h3>
+                  <div class="p-card__category">
+                    <span class="c-category">イベント</span>
+                    <span class="c-category">イベント</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="p-card">
+                  <div class="p-card__img">
+                    <img src="./assets/images/dummy/blog-dummy01.jpg" alt="" />
+                  </div>
+                  <time datetime="2024-04-24" class="p-card__date"
+                    >2024年4月24日</time
+                  >
+                  <h3 class="p-card__title">
+                    イオンモール上尾様にてハワイアンフェスステージを担当させていただきました
+                  </h3>
+                  <div class="p-card__category">
+                    <span class="c-category">イベント</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="p-card">
+                  <div class="p-card__img">
+                    <img src="./assets/images/dummy/blog-dummy02.jpg" alt="" />
+                  </div>
+                  <span class="p-card__date">2024年4月24日</span>
+                  <h3 class="p-card__title">
+                    長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト
+                  </h3>
+                  <div class="p-card__category">
+                    <span class="c-category">イベント</span>
+                    <span class="c-category">イベント</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="p-top-blog__btn u-mobile">
+            <a href="#" class="c-arrow-btn --white"
+              >ブログ・レポートをもっと⾒る</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="p-top-sdgs">
+        <div class="l-inner">
+          <div class="p-top-sdgs__img">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./assets/images/top/sdgs-img_pc.jpg"
+              />
+              <img
+                src="./assets/images/top/sdgs-img_sp.jpg"
+                alt="マミラスメンバーの集合写真"
+              />
+            </picture>
+          </div>
+          <div class="p-top-sdgs__body">
+            <h2 class="p-top-sdgs__heading">マミラス<br />SDGsの取り組み</h2>
+            <p class="p-top-sdgs__text">
+              原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。原稿が⼊ります。
+            </p>
+            <div class="p-top-sdgs__btn">
+              <a href="#" class="c-arrow-btn">SDGsの取り組みを⾒る</a>
+            </div>
+          </div>
+        </div>
+        <div class="p-top-sdgs__shape">
+          <img src="./assets/images/shape/shape10.svg" alt="" />
+        </div>
+      </section>
+      <section class="p-cta">
+        <div class="l-inner">
+          <div class="p-cta__heading c-heading --white">
+            <p class="c-heading__en">CONTACT</p>
+            <h2 class="c-heading__ja">お問い合わせ</h2>
+          </div>
+          <p class="p-cta__text">
+            イベント企画・運営・プロモーションなど、<br />
+            お気軽にお問い合わせください。
+          </p>
+          <div class="p-cta__btn">
+            <a href="#" class="c-arrow-btn --white"
+              >ご相談・お⾒積り・お問い合わせ</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="p-footer">
+      <div class="p-footer__block1">
+        <div class="l-inner">
+          <div class="p-fooer__above-wrapper">
+            <div class="p-footer__info">
+              <div class="p-footer__logo">
+                <a href="#">
+                  <img src="./assets/images/common/logo.svg" alt="Mamilus" />
+                </a>
+              </div>
+              <div class="p-footer__company">
+                <p class="p-footer__company-name">株式会社マミラス</p>
+                <p class="p-footer__company-address">
+                  <span>〒332-0012&nbsp;</span
+                  ><span>埼玉県川口市本町4丁目3-14 小峰第一ビル4F-J5</span>
+                </p>
+              </div>
+            </div>
+            <nav class="p-footer__nav">
+              <ul class="p-footer__nav-list">
+                <li class="p-footer__nav-item"><a href="#">トップ</a></li>
+                <li class="p-footer__nav-item"><a href="#">事業紹介</a></li>
+                <li class="p-footer__nav-item">
+                  <a href="#">SDGsの取り組み</a>
+                </li>
+                <li class="p-footer__nav-item">
+                  <a href="#">お知らせ・レポート</a>
+                </li>
+                <li class="p-footer__nav-item"><a href="#">スタッフ紹介</a></li>
+                <li class="p-footer__nav-item"><a href="#">会社情報</a></li>
+                <li class="p-footer__nav-item"><a href="#">お問い合わせ</a></li>
+                <li class="p-footer__nav-item">
+                  <a href="#">プライバシーポリシー</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-    </div>
-    <small class="p-footer__copyright">Copyright © mamilus all right reserved.</small>
-  </footer>
-</body>
-
+      <div class="p-footer__block2">
+        <div class="l-inner">
+          <div class="p-footer__block2-wrapper">
+            <p class="p-footer__block2-title">運⽤メディア・運⽤事業</p>
+            <ul class="p-footer__media">
+              <li class="p-footer__media-item">
+                <a
+                  href="https://saitama-mama.com/"
+                  class="p-footer__media-logo"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/images/common/media-logo01.png"
+                    alt="埼玉ママ情報"
+                  />
+                </a>
+                <ul class="p-footer__sns p-sns">
+                  <li class="p-sns__item">
+                    <a
+                      href="https://www.facebook.com/saitama.mama"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/common/facebook-icon.svg"
+                        alt="facebook"
+                    /></a>
+                  </li>
+                  <li class="p-sns__item">
+                    <a
+                      href="https://twitter.com/saitamamm_media"
+                      target="_blank"
+                      ><img src="./assets/images/common/x-icon.svg" alt="X"
+                    /></a>
+                  </li>
+                  <li class="p-sns__item">
+                    <a
+                      href="https://www.instagram.com/saitama.mama/"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/common/instagram-icon.svg"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="p-footer__media-item">
+                <a
+                  href="https://zimohapi.com/"
+                  class="p-footer__media-logo"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/images/common/media-logo02.png"
+                    alt="ジモハピ上尾"
+                  />
+                </a>
+                <ul class="p-footer__sns p-sns">
+                  <li class="p-sns__item">
+                    <a href="https://www.facebook.com/zimohapi" target="_blank"
+                      ><img
+                        src="./assets/images/common/facebook-icon.svg"
+                        alt="facebook"
+                    /></a>
+                  </li>
+                  <li class="p-sns__item">
+                    <a href="https://twitter.com/zimohapi/" target="_blank"
+                      ><img src="./assets/images/common/x-icon.svg" alt="X"
+                    /></a>
+                  </li>
+                  <li class="p-sns__item">
+                    <a
+                      href="https://www.instagram.com/zimohapi.ageo/"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/common/instagram-icon.svg"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="p-footer__media-item">
+                <a
+                  href="https://www.maming.jp/"
+                  class="p-footer__media-logo"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/images/common/media-logo03.png"
+                    alt="NPO法人マミング"
+                  />
+                </a>
+              </li>
+              <li class="p-footer__media-item">
+                <a href="#" class="p-footer__media-logo" target="_blank">
+                  <img
+                    src="./assets/images/common/media-logo04.png"
+                    alt="LOGO"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <small class="p-footer__copyright"
+        >Copyright © mamilus all right reserved.</small
+      >
+    </footer>
+  </body>
 </html>

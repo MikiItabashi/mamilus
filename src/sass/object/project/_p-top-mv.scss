@@ -2,12 +2,24 @@
 
 .p-top-mv {
   position: relative;
+  height: calc(100svh - rem(60));
 }
 
 .p-top-mv__bg {
   position: relative;
+  height: inherit;
   overflow: hidden;
   z-index: 1;
+}
+
+.p-top-mv__swiper {
+  height: inherit;
+}
+
+.p-top-mv__swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @keyframes zoom {

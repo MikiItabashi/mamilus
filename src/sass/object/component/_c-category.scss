@@ -12,3 +12,10 @@
     padding: rem(8) rem(12);
   }
 }
+@media (any-hover: hover) {
+  a.c-category {
+    &:hover {
+      color: $pink;
+    }
+  }
+}

@@ -8,16 +8,20 @@
   left: 0;
   right: 0;
   z-index: 100;
-  transition: background-color .3s;
-    @include mq("md") {
-      height: rem(128);
-    }
+  transition: background-color 0.3s;
+  @include mq("md") {
+    height: rem(128);
+  }
 }
 
 //背景色変更用クラス
 .p-header.is-color-changed {
   background-color: $white;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.p-header.is-color-changed .p-header__logo {
+  box-shadow: none;
 }
 
 .p-header__inner.l-inner {
@@ -28,7 +32,7 @@
     max-width: 1650px;
     padding-inline: rem(25);
     gap: rem(40);
- }
+  }
 }
 
 .p-header__left {
@@ -38,7 +42,7 @@
   gap: rem(10);
   @include mq("md") {
     gap: rem(18);
- }
+  }
 }
 
 .p-header__logo {
@@ -78,7 +82,7 @@
 }
 
 .p-header__right {
-  display: none; 
+  display: none;
   @include mq("md") {
     display: flex;
     align-items: center;
@@ -88,17 +92,15 @@
 }
 
 .p-header__nav {
-
 }
 
 .p-header__nav-list {
   display: flex;
   flex-wrap: wrap;
-  gap: .3em 1em;
+  gap: 0.3em 1em;
 }
 
 .p-header__nav-item {
-
 }
 
 .p-header__nav-item a {
@@ -128,7 +130,6 @@
   width: rem(180);
   flex-shrink: 0;
 }
-
 
 //ハンバーガー
 .p-header__hamburger {
@@ -163,12 +164,12 @@
 .p-header__hamburger-icon span {
   width: 100%;
   height: 2px;
-  transition: .3s;
+  transition: 0.3s;
   background-color: $white;
 }
 
 // 開いてる時
-.p-header__hamburger[aria-expanded=true] {
+.p-header__hamburger[aria-expanded="true"] {
   .p-header__hamburger-icon span:nth-child(1) {
     transform: translateY(#{rem(5)}) rotate(45deg);
   }
@@ -186,7 +187,3 @@
   color: $white;
   font-weight: $bold;
 }
-
-
-
-
